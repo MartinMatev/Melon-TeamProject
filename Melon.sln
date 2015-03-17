@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MelonDocumentationGenerator", "MelonDocumentationGenerator\MelonDocumentationGenerator.csproj", "{4ABD0318-5737-4018-92AE-BB83C4F271F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MelonLibrary", "MelonLibrary\MelonLibrary.csproj", "{D755F31F-6601-44AC-B253-40F8F79938D1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4ABD0318-5737-4018-92AE-BB83C4F271F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ABD0318-5737-4018-92AE-BB83C4F271F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ABD0318-5737-4018-92AE-BB83C4F271F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ABD0318-5737-4018-92AE-BB83C4F271F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D755F31F-6601-44AC-B253-40F8F79938D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D755F31F-6601-44AC-B253-40F8F79938D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D755F31F-6601-44AC-B253-40F8F79938D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D755F31F-6601-44AC-B253-40F8F79938D1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

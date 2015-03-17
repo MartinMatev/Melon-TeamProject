@@ -1,0 +1,33 @@
+﻿<Window x:Class="MelonDocumentationGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="417.313" Width="663.508">
+    <Grid>
+        <TabControl>
+            <TabItem Header="_General Info">
+                
+            </TabItem>
+            <TabItem Header="_Team Members">
+
+            </TabItem>
+            <TabItem Header="_Project Description">
+
+            </TabItem>
+            <TabItem Header="_Add Screenshots">
+
+            </TabItem>
+            <TabItem Header="_Project Repository">
+
+            </TabItem>
+            <TabItem Header="_Used Resources">
+
+            </TabItem>
+            <TabItem Header="_Select Style">
+
+            </TabItem>
+            <TabItem Header="_Export Documentation">
+
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
