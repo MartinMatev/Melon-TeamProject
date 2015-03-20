@@ -26,23 +26,25 @@ namespace MelonDocumentationGenerator
             facade = new DocumentationGenerator();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void SubmitGeneralInfo(object sender, RoutedEventArgs e)
         {
-            if (!AllFieldsFilled(tbCourse.Text,tbNameTeam.Text,tbProjectName.Text,tbProjectTypeInfo.Text))
+            if (!this.AllFieldsFilled(tbCourse.Text,tbNameTeam.Text,tbProjectName.Text,tbProjectTypeInfo.Text))
             {
-                lblError.Content = "Please fill all fields!";
+                this.statusLabel_generlInfo.Content = "Please fill all fields!";
             }
             else
             {
-                if (facade.GeneralProjectExist())
+                if (this.facade.GeneralProjectExist())
                 {
-                    facade.EditGeneralProjectInfo(tbProjectTypeInfo.Text, tbNameTeam.Text, tbCourse.Text, tbProjectName.Text);
-                    lblError.Content = "Edit Done!";
+                    facade.EditGeneralProjectInfo(tbProjectTypeInfo.Text, tbNameTeam.Text, tbCourse.Text,
+                        tbProjectName.Text);
+                    this.statusLabel_generlInfo.Content = "Edit Done!";
                 }
                 else
                 {
-                    facade.CreateNewGeneralProjectInfo(tbProjectTypeInfo.Text, tbNameTeam.Text, tbCourse.Text, tbProjectName.Text);
-                    lblError.Content = "Done!";
+                    facade.CreateNewGeneralProjectInfo(tbProjectTypeInfo.Text, tbNameTeam.Text, tbCourse.Text,
+                        tbProjectName.Text);
+                    this.statusLabel_generlInfo.Content = "Done!";
                 }
             }
         }
@@ -52,7 +54,9 @@ namespace MelonDocumentationGenerator
             foreach(string field in fields)
             {
                 if (String.IsNullOrWhiteSpace(field))
-                    return false;           
+                {
+                    return false;
+                }
             }
             return true;
         }

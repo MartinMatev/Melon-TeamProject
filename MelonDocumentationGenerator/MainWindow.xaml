@@ -33,10 +33,10 @@
 					Width="110">_Project Name:</Label>
                     <TextBox Height="21" Margin="110,160,10,0" Name="tbProjectName" 
 					VerticalAlignment="Top"/>
-                    <Label Height="37" Margin="200,190,0,0" Name="lblError" 
+                    <Label Height="37" Margin="200,190,0,0" Name="statusLabel_generlInfo" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Red"
 					Width="110"/>
-                    <Button Height="50" Margin="110,190,10,0" Click="Button_Click">
+                    <Button Height="50" Margin="110,190,10,0" Click="SubmitGeneralInfo">
                         Submit
                     </Button>
                 </Grid>
@@ -45,7 +45,7 @@
 
             </TabItem>
             <TabItem Header="_Project Description">
-
+                
             </TabItem>
             <TabItem Header="_Add Screenshots">
 

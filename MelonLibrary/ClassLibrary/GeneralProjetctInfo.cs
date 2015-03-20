@@ -8,15 +8,15 @@ namespace MelonLibrary
     public class GeneralProjetctInfo : Resource, IResource
     {
         private string projectTypeInfo;
-        private string nameTeam;
+        private string teamName;
         private string course;
         private string projectName;
 
-        public GeneralProjetctInfo(string projectTypeInfo, string nameTeam, string course, string projectName,Resource.ResourceType typeResource)
+        public GeneralProjetctInfo(string projectTypeInfo, string _teamName, string course, string projectName,Resource.ResourceType typeResource)
         {
             base.TypeResource = typeResource;
             this.projectTypeInfo = projectTypeInfo;
-            this.nameTeam = nameTeam;
+            this.teamName = _teamName;
             this.course = course;
             this.projectName = projectName;
         }
@@ -44,15 +44,15 @@ namespace MelonLibrary
             }
         }
      
-        public string NameTeam
+        public string TeamName
         {
             get
             {
-                return this.nameTeam;
+                return this.teamName;
             }
             set
             {
-                this.nameTeam = value;
+                this.teamName = value;
             }
         }
         public string Course
