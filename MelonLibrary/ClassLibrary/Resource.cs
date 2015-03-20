@@ -9,17 +9,8 @@ namespace MelonLibrary
     {
 
 
-        public ResourceType TypeResource
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public ResourceType TypeResource { get; set; }
+   
 
         public enum ResourceType
         {

@@ -1,13 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="MelonDocumentationGenerator.ProjectEntity">
-    <Position X="4.5" Y="3" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ClassLibrary\ProjectEntity.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="MelonDocumentationGenerator.Human" Collapsed="true">
+  <Class Name="MelonLibrary.Human" Collapsed="true">
     <Position X="11" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAg=</HashCode>
@@ -15,10 +8,10 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="MelonDocumentationGenerator.Resource" Collapsed="true">
+  <Class Name="MelonLibrary.Resource" Collapsed="true">
     <Position X="5.75" Y="5" Width="1.5" />
     <NestedTypes>
-      <Enum Name="MelonDocumentationGenerator.Resource.ResourceType" Collapsed="true">
+      <Enum Name="MelonLibrary.Resource.ResourceType" Collapsed="true">
         <TypeIdentifier>
           <NewMemberFileName>ClassLibrary\Resource.cs</NewMemberFileName>
         </TypeIdentifier>
@@ -30,31 +23,15 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="MelonDocumentationGenerator.TelerikHumanEntity" Collapsed="true">
-    <Position X="11" Y="6.25" Width="1.5" />
+  <Class Name="MelonLibrary.TelerikHumanEntity" Collapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ClassLibrary\TelerikHumanEntity.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="MelonDocumentationGenerator.TelerikTrainer">
-    <Position X="9.75" Y="7.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ClassLibrary\TelerikTrainer.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="MelonDocumentationGenerator.TelerikTrainee">
-    <Position X="12.5" Y="7.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ClassLibrary\TelerikTrainee.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="MelonDocumentationGenerator.ProjectParticipant">
+  <Class Name="MelonLibrary.ProjectParticipant" Collapsed="true">
     <Position X="9.75" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
@@ -62,15 +39,15 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="MelonDocumentationGenerator.GeneralProjetctInfo" Collapsed="true">
+  <Class Name="MelonLibrary.GeneralProjetctInfo" Collapsed="true">
     <Position X="4.25" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAgAAAAIAAAAAAAAAAQAAAAQAAAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgAAACIAAAAgAAAAAQAAAAUAAAAEAAAA=</HashCode>
       <FileName>ClassLibrary\GeneralProjetctInfo.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="MelonDocumentationGenerator.Screenshot" Collapsed="true">
+  <Class Name="MelonLibrary.Screenshot" Collapsed="true">
     <Position X="7" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAgAAAAIAAABAAAAAAAAAAAAAAABAAAAAA=</HashCode>
@@ -78,7 +55,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="MelonDocumentationGenerator.Paragraph" Collapsed="true">
+  <Class Name="MelonLibrary.Paragraph" Collapsed="true">
     <Position X="7" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAACAAAAAA=</HashCode>
@@ -86,7 +63,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="MelonDocumentationGenerator.ProjectGit" Collapsed="true">
+  <Class Name="MelonLibrary.ProjectGit" Collapsed="true">
     <Position X="4.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAACAACCAgAAAAAAA=</HashCode>
@@ -94,7 +71,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="MelonDocumentationGenerator.StylePattern">
+  <Class Name="MelonLibrary.StylePattern" Collapsed="true">
     <Position X="0.5" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAIAAAAAgAAAAAAAAAEAAAAAAAAAAAAAAAEAEAACABA=</HashCode>
@@ -102,14 +79,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="MelonDocumentationGenerator.MelonPattern" Collapsed="true">
-    <Position X="0.5" Y="6.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ClassLibrary\MelonPattern.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="MelonDocumentationGenerator.ExternalResource" Collapsed="true">
+  <Class Name="MelonLibrary.ExternalResource" Collapsed="true">
     <Position X="4.25" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAAAAIAAAAAAAAAAAAAAAAAAAAACAACAAAAAAAAAA=</HashCode>
@@ -117,7 +87,37 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="MelonDocumentationGenerator.DefaultPattern" Collapsed="true">
+  <Class Name="MelonDocumentationGeerator.DocumentationGenerator">
+    <Position X="0.5" Y="3" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DocumentationGenerator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelonLibrary.ProjectEntity">
+    <Position X="5.25" Y="3" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClassLibrary\ProjectEntity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MelonLibrary.TelerikTrainer" Collapsed="true">
+    <Position X="9" Y="7.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClassLibrary\TelerikTrainer.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MelonLibrary.TelerikTrainee" Collapsed="true">
+    <Position X="12.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClassLibrary\TelerikTrainee.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="MelonLibrary.DefaultPattern">
     <Position X="2.25" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -125,42 +125,43 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="MelonDocumentationGenerator.DocumentationGenerator">
-    <Position X="0.5" Y="3" Width="2.25" />
+  <Class Name="MelonLibrary.MelonPattern">
+    <Position X="0.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>DocumentationGenerator.cs</FileName>
+      <FileName>ClassLibrary\MelonPattern.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="MelonDocumentationGenerator.IHuman" Collapsed="true">
+  <Interface Name="MelonLibrary.IHuman" Collapsed="true">
     <Position X="5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
       <FileName>ClassLibrary\IHuman.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="MelonDocumentationGenerator.ITelerikHumanEntity" Collapsed="true">
+  <Interface Name="MelonLibrary.ITelerikHumanEntity" Collapsed="true">
     <Position X="0.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ClassLibrary\ITelerikHumanEntity.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="MelonDocumentationGenerator.IParticipant" Collapsed="true">
+  <Interface Name="MelonLibrary.IParticipant" Collapsed="true">
     <Position X="2.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
       <FileName>ClassLibrary\IParticipant.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="MelonDocumentationGenerator.IResource" Collapsed="true">
+  <Interface Name="MelonLibrary.IResource" Collapsed="true">
     <Position X="7.25" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ClassLibrary\IResource.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="MelonDocumentationGenerator.IStylePattern" Collapsed="true">
+  <Interface Name="MelonLibrary.IStylePattern" Collapsed="true">
     <Position X="9.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>

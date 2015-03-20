@@ -1,11 +1,45 @@
 ﻿<Window x:Class="MelonDocumentationGenerator.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" Height="417.313" Width="663.508">
+        Title="Melon Documentation Generator" Height="417.313" Width="663.508" Icon="melon_icon.ico">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </Window.Resources>
     <Grid>
         <TabControl>
             <TabItem Header="_General Info">
-                
+                <Grid Margin="0,0,0,0" Name="generalInfoGrid">
+                    <Label Height="37" Margin="10,10,0,0" Name="lblCourse" 
+					VerticalAlignment="Top" HorizontalAlignment="Left" 
+					Width="90">_Course:</Label>
+                    <TextBlock Height="21" Margin="110,-290,10,0" Text="OOP, CSharp Part I etc..." 
+                    Foreground="LightSteelBlue" Visibility="{Binding ElementName=tbCourse, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <TextBox Height="21" Margin="110,10,10,0" Name="tbCourse" 
+					VerticalAlignment="Top" Background="Transparent"/>
+                    <Label Height="37" Margin="10,60,0,0" Name="lblNameTeam" 
+					VerticalAlignment="Top" HorizontalAlignment="Left" 
+					Width="90">_Team Name:</Label>
+                    <TextBox Height="21" Margin="110,60,10,0" Name="tbNameTeam" 
+					VerticalAlignment="Top"/>
+                    <Label Height="37" Margin="10,110,0,0" Name="lblProjectTypeInfo" 
+					VerticalAlignment="Top" HorizontalAlignment="Left" 
+					Width="110">_Project Type:</Label>
+                    <TextBlock Height="21" Margin="110,-90,10,0" Text="Game, Business Application etc..." 
+                    Foreground="LightSteelBlue" Visibility="{Binding ElementName=tbProjectTypeInfo, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
+                    <TextBox Height="21" Margin="110,110,10,0" Name="tbProjectTypeInfo" 
+					VerticalAlignment="Top" Background="Transparent"/>
+                    <Label Height="37" Margin="10,160,0,0" Name="lblProjectName" 
+					VerticalAlignment="Top" HorizontalAlignment="Left" 
+					Width="110">_Project Name:</Label>
+                    <TextBox Height="21" Margin="110,160,10,0" Name="tbProjectName" 
+					VerticalAlignment="Top"/>
+                    <Label Height="37" Margin="200,190,0,0" Name="lblError" 
+					VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Red"
+					Width="110"/>
+                    <Button Height="50" Margin="110,190,10,0" Click="Button_Click">
+                        Submit
+                    </Button>
+                </Grid>
             </TabItem>
             <TabItem Header="_Team Members">
 

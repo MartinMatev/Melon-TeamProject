@@ -10,23 +10,37 @@ namespace MelonLibrary
         private string projectTypeInfo;
         private string nameTeam;
         private string course;
+        private string projectName;
 
-
-        public GeneralProjetctInfo(string projectTypeInfo)
+        public GeneralProjetctInfo(string projectTypeInfo, string nameTeam, string course, string projectName,Resource.ResourceType typeResource)
         {
-            throw new System.NotFiniteNumberException();
-
+            base.TypeResource = typeResource;
+            this.projectTypeInfo = projectTypeInfo;
+            this.nameTeam = nameTeam;
+            this.course = course;
+            this.projectName = projectName;
         }
 
-        public string ProjectInfo
+        public string ProjectTypeInfo
         {
             get
             {
-                throw new System.NotFiniteNumberException();
+               return this.projectTypeInfo;
             }
             set 
             {
-                throw new System.NotFiniteNumberException();
+                this.projectTypeInfo = value;
+            }
+        }
+        public string ProjectName
+        {
+            get
+            {
+                return this.projectName;
+            }
+            set
+            {
+                this.projectName = value;
             }
         }
      
@@ -34,22 +48,22 @@ namespace MelonLibrary
         {
             get
             {
-                throw new System.NotFiniteNumberException();
+                return this.nameTeam;
             }
             set
             {
-                throw new System.NotFiniteNumberException();
+                this.nameTeam = value;
             }
         }
         public string Course
         {
             get
             {
-                throw new System.NotFiniteNumberException();
+                return this.course;
             }
             set
             {
-                throw new System.NotFiniteNumberException();
+                this.course = value;
             }
         }
     }

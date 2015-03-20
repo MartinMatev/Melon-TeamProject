@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 namespace MelonDocumentationGenerator
 {
     /// <summary>
@@ -20,9 +19,42 @@ namespace MelonDocumentationGenerator
     /// </summary>
     public partial class MainWindow : Window
     {
+        private DocumentationGenerator facade;
         public MainWindow()
         {
             InitializeComponent();
+            facade = new DocumentationGenerator();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (!AllFieldsFilled(tbCourse.Text,tbNameTeam.Text,tbProjectName.Text,tbProjectTypeInfo.Text))
+            {
+                lblError.Content = "Please fill all fields!";
+            }
+            else
+            {
+                if (facade.GeneralProjectExist())
+                {
+                    facade.EditGeneralProjectInfo(tbProjectTypeInfo.Text, tbNameTeam.Text, tbCourse.Text, tbProjectName.Text);
+                    lblError.Content = "Edit Done!";
+                }
+                else
+                {
+                    facade.CreateNewGeneralProjectInfo(tbProjectTypeInfo.Text, tbNameTeam.Text, tbCourse.Text, tbProjectName.Text);
+                    lblError.Content = "Done!";
+                }
+            }
+        }
+
+        private bool AllFieldsFilled(params string[] fields)
+        {
+            foreach(string field in fields)
+            {
+                if (String.IsNullOrWhiteSpace(field))
+                    return false;           
+            }
+            return true;
         }
     }
 }
