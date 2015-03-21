@@ -5,12 +5,13 @@ using System.Text;
 
 namespace MelonLibrary
 {
-    public class Screenshot : Resource, IResource
+    public struct Screenshot : IResource
     {
         private string description;
         private string imageFilePath;
 
         public Screenshot(string description, string imageFilePath)
+            :this()
         {
             throw new System.NotFiniteNumberException();
         }
@@ -38,5 +39,18 @@ namespace MelonLibrary
                 throw new System.NotFiniteNumberException();
             }
         }
+
+        public Resource.ResourceType TypeResource
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }
+
