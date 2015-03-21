@@ -68,7 +68,9 @@
 
             </TabItem>
             <TabItem Header="_Used Resources">
-
+                <StackPanel>
+                    
+                </StackPanel>
             </TabItem>
             <TabItem Header="_Select Style">
 

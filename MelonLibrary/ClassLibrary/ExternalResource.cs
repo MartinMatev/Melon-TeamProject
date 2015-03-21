@@ -12,30 +12,36 @@ namespace MelonLibrary
 
         public ExternalResource(string resourceName, string resourceUrl)
         {
-            throw new System.NotFiniteNumberException();
+            this.TypeResource = Resource.ResourceType.ExternalResource;
+            this.ResourceName = resourceName;
+            this.Url = resourceUrl;
         }
 
         public string ResourceName
         {
-            get
-            {
-                throw new System.NotFiniteNumberException();
-            }
+            get { return this.resourceName; }
             set
             {
-                throw new System.NotFiniteNumberException();
+                if (String.IsNullOrWhiteSpace(value))
+                {
+                    throw new Exception();
+                }
+
+                this.resourceName = value;
             }
         }
 
         public string Url
         {
-            get
-            {
-                throw new System.NotFiniteNumberException();
-            }
+            get { return this.resourceUrl.AbsoluteUri; }
             set
             {
-                throw new System.NotFiniteNumberException();
+                if (String.IsNullOrWhiteSpace(value))
+                {
+                    throw new Exception();
+                }
+
+                this.resourceUrl = new Uri(value);
             }
         }
     }

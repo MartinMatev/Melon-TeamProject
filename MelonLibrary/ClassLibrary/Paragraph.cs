@@ -11,6 +11,7 @@ namespace MelonLibrary
 
         public Paragraph(string text)
         {
+            this.TypeResource = Resource.ResourceType.Paragraph;
             this.Text = text;
         }
 
