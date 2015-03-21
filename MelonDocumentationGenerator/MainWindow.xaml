@@ -48,7 +48,17 @@
                 
             </TabItem>
             <TabItem Header="_Add Screenshots">
-
+                <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
+                    <StackPanel Orientation="Vertical">
+                        <Label> Description: </Label>
+                        <TextBox x:Name="tb_screenshotDescription" Width="430" Height="100" Margin="5" ></TextBox>
+                        <TextBlock x:Name="tbl_screenshotStatus" Width="430" TextWrapping="WrapWithOverflow"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                        <Button x:Name="btn_screenshotDialog" Width="150" Height="40" Margin="0,35,0,0" Click="Btn_screenshotDialog_OnClick">Select Image</Button>
+                        <Button x:Name="btn_screenshotSubmit"  Width="150" Height="40" Margin="5" Click="Btn_screenshotSubmit_OnClick">Submit Screenshot</Button>
+                    </StackPanel>
+                </StackPanel>
             </TabItem>
             <TabItem Header="_Project Repository">
 

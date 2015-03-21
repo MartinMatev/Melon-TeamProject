@@ -9,47 +9,41 @@ namespace MelonLibrary
     {
         private string description;
         private string imageFilePath;
+        private Resource.ResourceType resourceType;
+
 
         public Screenshot(string description, string imageFilePath)
             :this()
         {
-            throw new System.NotFiniteNumberException();
+            this.TypeResource = Resource.ResourceType.Screenshot;
+            this.Description = description;
+            this.ImageFilePath = imageFilePath;
         }
 
         public string Description
         {
-            get
-            {
-                throw new System.NotFiniteNumberException();
-            }
+            get { return this.description; }
             set
             {
-                throw new System.NotFiniteNumberException();
+                if (String.IsNullOrWhiteSpace(value))
+                {
+                    throw new ArgumentException("Description");
+                }
+
+                this.description = value;
             }
         }
 
         public string ImageFilePath
         {
-            get
-            {
-                throw new System.NotFiniteNumberException();
-            }
-            set
-            {
-                throw new System.NotFiniteNumberException();
-            }
+            get { return this.imageFilePath; }
+            set { this.imageFilePath = value; }
         }
 
         public Resource.ResourceType TypeResource
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get { return this.resourceType; }
+            set { this.resourceType = value; }
         }
     }
 }

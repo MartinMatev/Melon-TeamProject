@@ -54,6 +54,11 @@ namespace MelonDocumentationGenerator
             generalInfo.ProjectTypeInfo = projectType;
             generalInfo.Course = course;
         }
-        
+
+
+        public void AddScreenshot(string imagePath, string description)
+        {
+            this.resources.Add(new Screenshot(description, imagePath));
+        }
     }
 }
