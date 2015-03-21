@@ -23,6 +23,9 @@ namespace MelonDocumentationGenerator
     public partial class MainWindow : Window
     {
         private DocumentationGenerator facade;
+        private Microsoft.Win32.OpenFileDialog screenshotDialog = new Microsoft.Win32.OpenFileDialog();
+        private Nullable<bool> screenshotDialogResult;
+        private string lastImageChosen;
 
         public MainWindow()
         {
@@ -63,6 +66,41 @@ namespace MelonDocumentationGenerator
                 }
             }
             return true;
+        }
+
+        private void Btn_screenshotDialog_OnClick(object sender, RoutedEventArgs e)
+        {
+            Microsoft.Win32.OpenFileDialog screenshotDialog = new Microsoft.Win32.OpenFileDialog();
+
+            screenshotDialog.DefaultExt = ".png";
+            screenshotDialog.Filter =
+                "PNG Files (*.png)|*.png|JPEG Files (*.jpeg)|*.jpeg|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
+
+            this.screenshotDialogResult = screenshotDialog.ShowDialog();
+
+            if (this.screenshotDialogResult == true)
+            {
+                this.lastImageChosen = screenshotDialog.FileName;
+            }
+        }
+
+        private void Btn_screenshotSubmit_OnClick(object sender, RoutedEventArgs e)
+        {
+            if (this.screenshotDialogResult == true)
+            {
+                this.facade.AddScreenshot(this.lastImageChosen, this.tb_screenshotDescription.Text);
+            }
+
+            MessageBox.Show("Screenshot saved!", "Screenshot saved", MessageBoxButton.OK);
+
+            string fileName = PathIO.GetFileName(this.lastImageChosen);
+            string imageDescription = this.tb_screenshotDescription.Text
+                .Substring(0, Math.Min(50, this.tb_screenshotDescription.Text.Length));
+
+            this.tbl_screenshotStatus.Text += String.Format("{2}{0} - {1}", fileName,
+                imageDescription, Environment.NewLine);
+
+            this.tb_screenshotDescription.Text = String.Empty;
         }
     }
 }
