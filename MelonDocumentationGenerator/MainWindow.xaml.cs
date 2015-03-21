@@ -22,6 +22,7 @@ namespace MelonDocumentationGenerator
     /// </summary>
     public partial class MainWindow : Window
     {
+        private RadioButton rbTypeMember;
         private DocumentationGenerator facade;
         private Microsoft.Win32.OpenFileDialog screenshotDialog = new Microsoft.Win32.OpenFileDialog();
         private Nullable<bool> screenshotDialogResult;
@@ -31,6 +32,7 @@ namespace MelonDocumentationGenerator
         {
             InitializeComponent();
             facade = new DocumentationGenerator();
+            rbTypeMember = rbTrainee;
         }
 
         private void SubmitGeneralInfo(object sender, RoutedEventArgs e)
@@ -55,6 +57,34 @@ namespace MelonDocumentationGenerator
                 }
             }
         }
+
+        private void AddTeamMember(object sender, RoutedEventArgs e)
+        {
+            if (!this.AllFieldsFilled(tbFName.Text, tbLastName.Text, tbUserName.Text) || (this.rbTypeMember == null))
+            {
+                this.lblTeamMemberMessage.Content = "Please fill all fields!";
+            }
+
+            else
+            {
+                if (this.facade.TeamMemberExist(tbFName.Text, tbLastName.Text, tbUserName.Text))
+                {
+
+                    this.lblTeamMemberMessage.Content = "This member alredy exist!";
+                }
+                else
+                {
+                    facade.AddNewTeamMember(tbFName.Text, tbLastName.Text, tbUserName.Text, rbTypeMember.Name.Substring(2), (bool)cxbHasParticipated.IsChecked);
+
+                    this.lblTeamMemberMessage.Content = "Member added!";
+                }
+            }
+        }
+        private void HandleCheckTeamMember(object sender, RoutedEventArgs e)
+        {
+            this.rbTypeMember = sender as RadioButton;
+        }
+            
 
         private bool AllFieldsFilled(params string[] fields)
         {
@@ -110,6 +140,6 @@ namespace MelonDocumentationGenerator
                 imageDescription, Environment.NewLine);
 
             this.tb_screenshotDescription.Text = String.Empty;
-        }
+        }     
     }
 }

@@ -42,7 +42,32 @@
                 </Grid>
             </TabItem>
             <TabItem Header="_Team Members">
-
+                <Grid Margin="0,0,0,0" Name="teamMemberGrid">
+                    <Label Height="37" Margin="10,10,0,0" Name="lblFName" 
+					VerticalAlignment="Top" HorizontalAlignment="Left" 
+					Width="90">_First Name:</Label>
+                    <TextBox Height="21" Margin="110,10,10,0" Name="tbFName" 
+					VerticalAlignment="Top" Background="Transparent"/>
+                    <Label Height="37" Margin="10,60,0,0" Name="lblLName" 
+					VerticalAlignment="Top" HorizontalAlignment="Left" 
+					Width="90">_Last Name:</Label>
+                    <TextBox Height="21" Margin="110,60,10,0" Name="tbLastName" 
+					VerticalAlignment="Top"/>
+                    <Label Height="37" Margin="10,110,0,0" Name="lblUserName" 
+					VerticalAlignment="Top" HorizontalAlignment="Left" 
+					Width="110">_User Name:</Label>
+                    <TextBox Height="21" Margin="110,110,10,0" Name="tbUserName" 
+					VerticalAlignment="Top"/>
+                    <CheckBox Name="cxbHasParticipated" Margin="110,150,0,0" IsChecked="True">Has participated</CheckBox>
+                    <Label Height="37" Margin="250,150,0,0" Name="lblTeamMemberMessage" 
+					VerticalAlignment="Top" HorizontalAlignment="Left" 
+					Width="300" Foreground="Red"/>
+                    <RadioButton GroupName="rbTypeMember"  Name="rbTrainer"  Height="37" Margin="150,80,0,0" Checked="HandleCheckTeamMember">Trainer</RadioButton>
+                    <RadioButton GroupName="rbTypeMember" Name="rbTrainee" Height="37" Margin="250,80,0,0" Checked="HandleCheckTeamMember" IsChecked="True">Trainee</RadioButton>
+                    <Button Height="50" Margin="110,190,10,0" Click="AddTeamMember">
+                        Add Team Member
+                    </Button>
+                </Grid>
             </TabItem>
             <TabItem Header="_Project Description">
                 <StackPanel>
