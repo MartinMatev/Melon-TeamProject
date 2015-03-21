@@ -8,20 +8,26 @@ namespace MelonLibrary
     public class Paragraph : Resource, IResource
     {
         private string text;
+
         public Paragraph(string text)
         {
-            throw new System.NotImplementedException();
+            this.Text = text;
         }
 
         public string Text
         {
             get
             {
-                throw new System.NotFiniteNumberException();
+                return this.text;
             }
             set
             {
-                throw new System.NotFiniteNumberException();
+                if (String.IsNullOrWhiteSpace(value))
+                {
+                    throw new System.NullReferenceException();
+                }
+
+                this.text = value;
             }
         }
     }

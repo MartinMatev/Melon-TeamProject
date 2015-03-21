@@ -45,7 +45,10 @@
 
             </TabItem>
             <TabItem Header="_Project Description">
-                
+                <StackPanel>
+                    <TextBox x:Name="tbr_mainProjectDescription" Width="400" Height="280"></TextBox>
+                    <Button x:Name="btn_mainDescriptionSubmit" Click="SubmitMainDescription" Width="400" Margin="10">Submit Project Description</Button>
+                </StackPanel>
             </TabItem>
             <TabItem Header="_Add Screenshots">
 

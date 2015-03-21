@@ -60,5 +60,12 @@ namespace MelonDocumentationGenerator
             }
             return true;
         }
+
+        private void SubmitMainDescription(object sender, RoutedEventArgs e)
+        {
+            facade.ProjectDescriptionChanged(this.tbr_mainProjectDescription.Text);
+
+            MessageBox.Show("Project description saved!", "Description saved", MessageBoxButton.OK);
+        }
     }
 }

@@ -10,10 +10,14 @@ namespace MelonDocumentationGenerator
     {
         private List<IResource> resources;
         private GeneralProjetctInfo generalInfo;
+        private Paragraph mainProjectDescription;
+        private const string EmptyEntry = "not filled";
 
         public DocumentationGenerator()
         {
             this.ResourceList = new List<IResource>();
+            this.mainProjectDescription = new Paragraph(DocumentationGenerator.EmptyEntry);
+            this.resources.Add(this.mainProjectDescription);
         }
 
         public List<IResource> ResourceList
@@ -54,6 +58,10 @@ namespace MelonDocumentationGenerator
             generalInfo.ProjectTypeInfo = projectType;
             generalInfo.Course = course;
         }
-        
+
+        public void ProjectDescriptionChanged(string textChanged)
+        {
+            this.mainProjectDescription.Text = textChanged;
+        }
     }
 }
