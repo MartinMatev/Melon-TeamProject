@@ -68,6 +68,15 @@ namespace MelonDocumentationGenerator
             return true;
         }
 
+
+        private void SubmitMainDescription(object sender, RoutedEventArgs e)
+        {
+            facade.ProjectDescriptionChanged(this.tbr_mainProjectDescription.Text);
+
+            MessageBox.Show("Project description saved!", "Description saved", MessageBoxButton.OK);
+        }
+
+
         private void Btn_screenshotDialog_OnClick(object sender, RoutedEventArgs e)
         {
             Microsoft.Win32.OpenFileDialog screenshotDialog = new Microsoft.Win32.OpenFileDialog();

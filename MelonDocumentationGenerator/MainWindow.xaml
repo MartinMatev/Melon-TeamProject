@@ -45,7 +45,11 @@
 
             </TabItem>
             <TabItem Header="_Project Description">
-                
+                <StackPanel>
+                    <Label Margin="120,5,5,5">General Project description:</Label>
+                    <TextBox x:Name="tbr_mainProjectDescription" Width="400" Height="200"></TextBox>
+                    <Button x:Name="btn_mainDescriptionSubmit" Click="SubmitMainDescription" Width="400" Height="50" Margin="10">Submit Project Description</Button>
+                </StackPanel> 
             </TabItem>
             <TabItem Header="_Add Screenshots">
                 <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
