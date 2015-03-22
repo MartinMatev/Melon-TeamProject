@@ -119,6 +119,12 @@
   <ItemGroup>
     <Resource Include="melon_icon.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\codepr_logo.png" />
+    <Resource Include="Images\msdn_logo.png" />
+    <Resource Include="Images\stack_logo.png" />
+    <Resource Include="Images\wiki_logo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

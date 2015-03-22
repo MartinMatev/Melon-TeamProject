@@ -1,17 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using Microsoft.Win32;
 using  PathIO = System.IO.Path;
 
 
@@ -24,7 +15,7 @@ namespace MelonDocumentationGenerator
     {
         private RadioButton rbTypeMember;
         private DocumentationGenerator facade;
-        private Microsoft.Win32.OpenFileDialog screenshotDialog = new Microsoft.Win32.OpenFileDialog();
+        private OpenFileDialog screenshotDialog = new OpenFileDialog();
         private Nullable<bool> screenshotDialogResult;
         private string lastImageChosen;
 
@@ -109,7 +100,7 @@ namespace MelonDocumentationGenerator
 
         private void Btn_screenshotDialog_OnClick(object sender, RoutedEventArgs e)
         {
-            Microsoft.Win32.OpenFileDialog screenshotDialog = new Microsoft.Win32.OpenFileDialog();
+            OpenFileDialog screenshotDialog = new OpenFileDialog();
 
             screenshotDialog.DefaultExt = ".png";
             screenshotDialog.Filter =
@@ -145,6 +136,57 @@ namespace MelonDocumentationGenerator
         private void TeamMemberSubmit_OnLostFocus(object sender, RoutedEventArgs e)
         {
             this.lblTeamMemberMessage.Content = String.Empty;
+        }
+
+        #region LoadExternalResource
+        private void LoadStackResource(object sender, RoutedEventArgs e)
+        {
+            this.ResourceName.Text = "Stack Overflow";
+            this.ResourceURL.Text = "http://stackoverflow.com/";
+        }
+
+        private void LoadMsdnResource(object sender, RoutedEventArgs e)
+        {
+            this.ResourceName.Text = "MSDN";
+            this.ResourceURL.Text = "https://msdn.microsoft.com";
+        }
+
+        private void LoadCodeProjectResource(object sender, RoutedEventArgs e)
+        {
+            this.ResourceName.Text = "Code Project";
+            this.ResourceURL.Text = "http://www.codeproject.com/";
+        }
+
+        private void LoadWikipediaResource(object sender, RoutedEventArgs e)
+        {
+            this.ResourceName.Text = "Wikipedia";
+            this.ResourceURL.Text = "http://www.wikipedia.org/";
+        }
+
+        #endregion
+
+        private void ExternalResourceSubmit(object sender, RoutedEventArgs e)
+        {
+            if (!this.AllFieldsFilled(this.ResourceName.Text, this.ResourceURL.Text))
+            {
+                if (String.IsNullOrWhiteSpace(this.ResourceName.Text))
+                {
+                    this.ResourceNameLabel.Foreground = Brushes.Red;
+                }
+                if (String.IsNullOrWhiteSpace(this.ResourceURL.Text))
+                {
+                    this.ResourceUrlLabel.Foreground = Brushes.Red;
+                }
+            }
+            else
+            {
+                this.ResourceUrlLabel.Foreground = Brushes.Black;
+                this.ResourceNameLabel.Foreground = Brushes.Black;
+
+                this.facade.AddResource(this.ResourceName.Text, this.ResourceURL.Text);
+
+                MessageBox.Show("Resource added!", "Resource added", MessageBoxButton.OK);
+            }
         }
     }
 }

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace MelonLibrary
 {
@@ -11,7 +8,7 @@ namespace MelonLibrary
 
         public Paragraph(string text)
         {
-            this.TypeResource = Resource.ResourceType.Paragraph;
+            this.TypeResource = ResourceType.Paragraph;
             this.Text = text;
         }
 
@@ -25,7 +22,7 @@ namespace MelonLibrary
             {
                 if (String.IsNullOrWhiteSpace(value))
                 {
-                    throw new System.NullReferenceException();
+                    throw new NullReferenceException();
                 }
 
                 this.text = value;

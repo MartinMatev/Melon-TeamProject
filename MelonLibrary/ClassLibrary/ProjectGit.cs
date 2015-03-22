@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace MelonLibrary
 {
@@ -12,18 +9,18 @@ namespace MelonLibrary
 
         public ProjectGit(string repositoryName, string repositoryUrl)
         {
-            throw new System.NotFiniteNumberException();
+            throw new NotFiniteNumberException();
         }
 
         public string RepositoryName
         {
             get
             {
-                throw new System.NotFiniteNumberException();
+                throw new NotFiniteNumberException();
             }
             set
             {
-                throw new System.NotFiniteNumberException();
+                throw new NotFiniteNumberException();
             }
         }
 
@@ -31,11 +28,11 @@ namespace MelonLibrary
         {
             get
             {
-                throw new System.NotFiniteNumberException();
+                throw new NotFiniteNumberException();
             }
             set
             {
-                throw new System.NotFiniteNumberException();
+                throw new NotFiniteNumberException();
             }
         }
     }

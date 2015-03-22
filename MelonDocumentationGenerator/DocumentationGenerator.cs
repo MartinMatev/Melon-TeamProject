@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using MelonLibrary;
 
 namespace MelonDocumentationGenerator
@@ -17,7 +15,7 @@ namespace MelonDocumentationGenerator
         public DocumentationGenerator()
         {
             this.ResourceList = new List<IResource>();
-            this.mainProjectDescription = new Paragraph(DocumentationGenerator.EmptyEntry);
+            this.mainProjectDescription = new Paragraph(EmptyEntry);
             this.resources.Add(this.mainProjectDescription);
             this.TeamMembersList = new List<IHuman>();
         }
@@ -106,6 +104,11 @@ namespace MelonDocumentationGenerator
         public void AddScreenshot(string imagePath, string description)
         {
             this.resources.Add(new Screenshot(description, imagePath));
+        }
+
+        public void AddResource(string name, string url)
+        {
+            this.resources.Add(new ExternalResource(name, url));
         }
     }
 }

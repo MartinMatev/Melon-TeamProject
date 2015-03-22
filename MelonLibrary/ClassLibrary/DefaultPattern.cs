@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using iTextSharp.text;
-using Image = iTextSharp.text.Image;
+﻿using iTextSharp.text;
 
 namespace MelonLibrary
 {

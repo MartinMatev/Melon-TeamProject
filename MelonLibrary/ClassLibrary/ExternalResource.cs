@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace MelonLibrary
 {
@@ -12,7 +9,7 @@ namespace MelonLibrary
 
         public ExternalResource(string resourceName, string resourceUrl)
         {
-            this.TypeResource = Resource.ResourceType.ExternalResource;
+            this.TypeResource = ResourceType.ExternalResource;
             this.ResourceName = resourceName;
             this.Url = resourceUrl;
         }

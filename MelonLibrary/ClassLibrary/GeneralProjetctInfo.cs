@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace MelonLibrary
+﻿namespace MelonLibrary
 {
     public class GeneralProjetctInfo : Resource, IResource
     {
@@ -12,7 +7,7 @@ namespace MelonLibrary
         private string course;
         private string projectName;
 
-        public GeneralProjetctInfo(string projectTypeInfo, string _teamName, string course, string projectName,Resource.ResourceType typeResource)
+        public GeneralProjetctInfo(string projectTypeInfo, string _teamName, string course, string projectName,ResourceType typeResource)
         {
             base.TypeResource = typeResource;
             this.projectTypeInfo = projectTypeInfo;

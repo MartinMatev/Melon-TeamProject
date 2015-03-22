@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using iTextSharp.text;
-using Image = iTextSharp.text.Image;
 
 namespace MelonLibrary
 {
@@ -16,18 +12,18 @@ namespace MelonLibrary
 
         public StylePattern(Font font, PageSize pageSize, Image header, bool pageNumber)
         {
-            throw new System.NotFiniteNumberException();
+            throw new NotFiniteNumberException();
         }
 
         public Font Font
         {
             get
             {
-                throw new System.NotFiniteNumberException();
+                throw new NotFiniteNumberException();
             }
             set
             {
-                throw new System.NotFiniteNumberException();
+                throw new NotFiniteNumberException();
             }
         }
 
@@ -35,11 +31,11 @@ namespace MelonLibrary
         {
             get
             {
-                throw new System.NotFiniteNumberException();
+                throw new NotFiniteNumberException();
             }
             set
             {
-                throw new System.NotFiniteNumberException();
+                throw new NotFiniteNumberException();
             }
         }
 
@@ -47,11 +43,11 @@ namespace MelonLibrary
         {
             get
             {
-                throw new System.NotFiniteNumberException();
+                throw new NotFiniteNumberException();
             }
             set
             {
-                throw new System.NotFiniteNumberException();
+                throw new NotFiniteNumberException();
             }
         }
 
@@ -59,11 +55,11 @@ namespace MelonLibrary
         {
             get
             {
-                throw new System.NotFiniteNumberException();
+                throw new NotFiniteNumberException();
             }
             set
             {
-                throw new System.NotFiniteNumberException();
+                throw new NotFiniteNumberException();
             }
         }
     }
