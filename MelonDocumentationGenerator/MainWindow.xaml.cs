@@ -140,6 +140,11 @@ namespace MelonDocumentationGenerator
                 imageDescription, Environment.NewLine);
 
             this.tb_screenshotDescription.Text = String.Empty;
-        }     
+        }
+
+        private void TeamMemberSubmit_OnLostFocus(object sender, RoutedEventArgs e)
+        {
+            this.lblTeamMemberMessage.Content = String.Empty;
+        }
     }
 }
