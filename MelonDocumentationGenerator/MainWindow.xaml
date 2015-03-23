@@ -96,19 +96,19 @@
                     Width="110">_Repository Name:</Label>
                     <TextBlock Height="21" Margin="135,-275,10,0" Text="Enter Repository Name..." 
                     Foreground="LightSteelBlue" Visibility="{Binding ElementName=tbRepositoryName, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                    <TextBox Height="21" Margin="130,10,10,0" Name="tbRepositoryName" 
+                    <TextBox Height="25" Margin="130,10,10,0" Name="tbRepositoryName" 
                     VerticalAlignment="Top" Background="Transparent"/>
                     <Label Height="37" Margin="10,60,0,0" Name="lblRepositoryURL" 
                     VerticalAlignment="Top" HorizontalAlignment="Left" 
                     Width="110">_Repository URL:</Label>
                     <TextBlock Height="21" Margin="135,-175,10,0" Text="Enter Repository URL..." 
                     Foreground="LightSteelBlue" Visibility="{Binding ElementName=tbRepositoryUrl, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                    <TextBox Height="21" Margin="130,60,10,0" Name="tbRepositoryUrl" 
+                    <TextBox Height="25" Margin="130,60,10,0" Name="tbRepositoryUrl" 
                     VerticalAlignment="Top" Background="Transparent"/>
                     <Label Height="37" Margin="200,90,0,0" Name="statusLabel_projectRepositoryInfo" 
                     VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Red"
                     Width="110"/>
-                    <Button Height="50" Margin="110,190,10,0" Click="SubmitProjectRepository">
+                    <Button Height="50" Margin="110,190,10,0" Click="SubmitProjectRepositoryInfo" LostFocus="GitUrlSubmit_LostFocus">
                         Submit
                     </Button>
                 </Grid>

@@ -54,8 +54,6 @@ namespace MelonDocumentationGenerator
                 this.teamMembers = value;
             }
         }
-
-
        
         public bool TeamMemberExist(string fName, string lName, string uName)
         {

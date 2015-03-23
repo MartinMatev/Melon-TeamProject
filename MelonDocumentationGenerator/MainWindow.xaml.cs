@@ -209,5 +209,10 @@ namespace MelonDocumentationGenerator
                 MessageBox.Show("Resource added!", "Resource added", MessageBoxButton.OK);
             }
         }
+
+        private void GitUrlSubmit_LostFocus(object sender, RoutedEventArgs e)
+        {
+            this.statusLabel_projectRepositoryInfo.Content = String.Empty;
+        }
     }
 }
