@@ -9,6 +9,7 @@ namespace MelonDocumentationGenerator
         private List<IHuman> teamMembers;
         private List<IResource> resources;
         private GeneralProjetctInfo generalInfo;
+        private ProjectGit projectGitInfo;
         private Paragraph mainProjectDescription;
         private const string EmptyEntry = "not filled";
 
@@ -82,9 +83,22 @@ namespace MelonDocumentationGenerator
             this.resources.Add(this.generalInfo);           
         }
 
+        public void CreateNewProjectGit(string repositoryName, string repositoryUrl)
+        {
+            this.projectGitInfo = new ProjectGit(repositoryName, repositoryUrl, Resource.ResourceType.GitHubRepository);
+
+            this.resources.Add(this.projectGitInfo);
+        }
+
         public bool GeneralProjectExist()
         {
             return this.ResourceList.Exists(x => x.TypeResource == Resource.ResourceType.GeneralProjectInfo);
+
+        }
+
+        public bool GitUrlExist()
+        {
+            return this.ResourceList.Exists(x => x.TypeResource == Resource.ResourceType.GitHubRepository);
 
         }
 
@@ -94,6 +108,12 @@ namespace MelonDocumentationGenerator
             generalInfo.ProjectName = projectName;
             generalInfo.ProjectTypeInfo = projectType;
             generalInfo.Course = course;
+        }
+
+        public void EditProjectGit(string repositoryName, string repositoryUrl)
+        {
+            projectGitInfo.RepositoryName = repositoryName;
+            projectGitInfo.Url = repositoryUrl;
         }
 
         public void ProjectDescriptionChanged(string textChanged)

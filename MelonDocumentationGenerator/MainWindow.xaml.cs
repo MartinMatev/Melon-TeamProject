@@ -49,6 +49,27 @@ namespace MelonDocumentationGenerator
             }
         }
 
+        private void SubmitProjectRepositoryInfo(object sender, RoutedEventArgs e)
+        {
+            if (!this.AllFieldsFilled(tbRepositoryName.Text, tbRepositoryUrl.Text))
+            {
+                this.statusLabel_projectRepositoryInfo.Content = "Please fill all fields!";
+            }
+            else
+            {
+                if (this.facade.GitUrlExist())
+                {
+                    facade.EditProjectGit(tbRepositoryName.Text, tbRepositoryUrl.Text);
+                    this.statusLabel_projectRepositoryInfo.Content = "Edit Done!";
+                }
+                else
+                {
+                    facade.CreateNewProjectGit(tbRepositoryName.Text, tbRepositoryUrl.Text);
+                    this.statusLabel_projectRepositoryInfo.Content = "Done!";
+                }
+            }
+        }
+
         private void AddTeamMember(object sender, RoutedEventArgs e)
         {
             if (!this.AllFieldsFilled(tbFName.Text, tbLastName.Text, tbUserName.Text) || (this.rbTypeMember == null))

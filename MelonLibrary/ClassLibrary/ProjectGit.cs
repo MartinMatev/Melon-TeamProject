@@ -7,20 +7,22 @@ namespace MelonLibrary
         private string repositoryName;
         private Uri gitUrl;
 
-        public ProjectGit(string repositoryName, string repositoryUrl)
+        public ProjectGit(string repositoryName, string repositoryUrl, Resource.ResourceType typeResource)
         {
-            throw new NotFiniteNumberException();
+            base.TypeResource = typeResource;
+            this.repositoryName = repositoryName;
+            this.Url = repositoryUrl;
         }
 
         public string RepositoryName
         {
             get
             {
-                throw new NotFiniteNumberException();
+                return this.repositoryName;
             }
             set
             {
-                throw new NotFiniteNumberException();
+                this.repositoryName = value;
             }
         }
 
@@ -28,11 +30,11 @@ namespace MelonLibrary
         {
             get
             {
-                throw new NotFiniteNumberException();
+                return this.gitUrl.ToString();
             }
             set
             {
-                throw new NotFiniteNumberException();
+                this.gitUrl = new Uri(value);
             }
         }
     }
