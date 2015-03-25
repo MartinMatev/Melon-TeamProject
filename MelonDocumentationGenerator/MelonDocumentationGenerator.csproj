@@ -125,6 +125,11 @@
     <Resource Include="Images\stack_logo.png" />
     <Resource Include="Images\wiki_logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\default_one.jpg" />
+    <Resource Include="Images\Koala.jpg" />
+    <Resource Include="Images\Penguins.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
