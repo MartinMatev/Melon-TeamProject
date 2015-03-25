@@ -159,7 +159,38 @@
                 </StackPanel>
             </TabItem>
             <TabItem Header="_Select Style">
-
+                <StackPanel>
+                    <Label Height="37" Margin="50,26,0,0" Name="lblStyleOptions" 
+					VerticalAlignment="Top" HorizontalAlignment="Left" 
+					Width="196">_Choose the style of the document:</Label>
+                    <ComboBox Height="25" Margin="259,-34,0,0" Name="cmbStyle"
+                          VerticalAlignment="Top" HorizontalAlignment="Left"
+                          Width="196" IsReadOnly="True" IsEditable="True" Text="Choose a style"
+                          SelectionChanged="OnStyleComboBoxChanged">
+                        <ComboBoxItem Tag="default">Default Pattern</ComboBoxItem>
+                        <ComboBoxItem Tag="melon">Melon Pattern</ComboBoxItem>
+                    </ComboBox>
+                    <Button Width="80" Height="22" Margin="391,-39,-59,8" 
+                            Name="buttonStylePatternChosen" Click="OnStyleButtonClick"
+                            ToolTip="I won't kidnap you, I swear..."
+                            Background="Transparent" Content="Free candy">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="IsEnabled" Value="False" />
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Text, ElementName=cmbStyle}" Value="Default Pattern">
+                                        <Setter Property="IsEnabled" Value="True" />
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Text, ElementName=cmbStyle}" Value="Melon Pattern">
+                                        <Setter Property="IsEnabled" Value="True" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <Label Height="37" Margin="30,12,0,0" x:Name="lblStylePreview">Preview of the style of your choosing:</Label>
+                    <Image Source ="Images/default_one.jpg" Height="200" Width="500" x:Name="imgStylePreview"></Image>
+                </StackPanel>
             </TabItem>
             <TabItem Header="_Export Documentation">
 

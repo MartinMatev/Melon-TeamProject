@@ -6,48 +6,71 @@ namespace MelonLibrary
     public abstract class StylePattern : ProjectEntity, IStylePattern
     {
         protected Font font;
-        protected PageSize pageSize;
-        protected Image headerImage;
+        protected Document pageSize;
+        protected Image templateImage;
         protected bool pageNumber;
 
-        public StylePattern(Font font, PageSize pageSize, Image header, bool pageNumber)
+        public StylePattern(Font font, Document pageSize, Image template, bool pageNumber, StylePattern.PatternType patternType)
         {
-            throw new NotFiniteNumberException();
+            this.Font = font;
+            this.PageSize = pageSize;
+            this.TemplateImage = template;
+            this.PageEnumeration = pageNumber;
+            this.TypePattern = patternType;
+
         }
+
+        public PatternType TypePattern { get; set; }
 
         public Font Font
         {
             get
             {
-                throw new NotFiniteNumberException();
+                return this.font;
             }
             set
             {
-                throw new NotFiniteNumberException();
+
+                if (value == null)
+                {
+                    throw new ArgumentNullException("Font vaue cannot be null.");
+                }
+
+                this.font = value;
             }
         }
 
-        public PageSize PageSize
+        public Document PageSize
         {
             get
             {
-                throw new NotFiniteNumberException();
+                return this.pageSize;
             }
             set
             {
-                throw new NotFiniteNumberException();
+                if (value == null)
+                {
+                    throw new ArgumentNullException("Page size is not set");
+                }
+
+                this.pageSize = value;
             }
         }
 
-        public Image Header
+        public Image TemplateImage
         {
             get
             {
-                throw new NotFiniteNumberException();
+                return this.templateImage;
             }
             set
             {
-                throw new NotFiniteNumberException();
+                if (value == null)
+                {
+                    throw new ArgumentNullException("Header image is not set");
+                }
+
+                this.templateImage = value;
             }
         }
 
@@ -55,12 +78,23 @@ namespace MelonLibrary
         {
             get
             {
-                throw new NotFiniteNumberException();
+                return this.pageNumber;
             }
             set
             {
-                throw new NotFiniteNumberException();
+                if (value == null)
+                {
+                    throw new ArgumentNullException("Page enumeration is not set");
+                }
+
+                this.pageNumber = value;
             }
+        }
+
+        public enum PatternType
+        {
+            Default,
+            Melon
         }
     }
 }

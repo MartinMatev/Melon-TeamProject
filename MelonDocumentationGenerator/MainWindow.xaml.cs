@@ -4,6 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using Microsoft.Win32;
 using  PathIO = System.IO.Path;
+using System.Windows.Media.Imaging;
 
 
 namespace MelonDocumentationGenerator
@@ -207,6 +208,50 @@ namespace MelonDocumentationGenerator
                 this.facade.AddResource(this.ResourceName.Text, this.ResourceURL.Text);
 
                 MessageBox.Show("Resource added!", "Resource added", MessageBoxButton.OK);
+            }
+        }
+
+        private void OnStyleComboBoxChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var patternCombo = sender as ComboBox;
+            var selectedItem = patternCombo.SelectedItem as ComboBoxItem;
+            if (selectedItem == null)
+            {
+                patternCombo.SelectedIndex = 0;
+                return;
+            }
+
+            if (selectedItem.Content.ToString() == "Default Pattern")
+            {
+                SetStyleImagePreview("../../Images/Koala.jpg");                
+            }
+            else
+            {
+                SetStyleImagePreview("../../Images/Penguins.jpg");
+            }
+        }
+
+        private void SetStyleImagePreview(string path)
+        {
+            imgStylePreview.Source = new BitmapImage(new Uri(System.IO.Path.GetFullPath(path)));
+        }
+
+        private void OnStyleButtonClick(object sender, EventArgs e)
+        {
+            ComboBoxItem comboboxItem = cmbStyle.SelectedItem as ComboBoxItem;
+
+            if (comboboxItem != null)
+            {
+                MessageBox.Show("I LIED....");
+            }
+
+            if (comboboxItem.Content.ToString() == "Default Pattern")
+            {
+                facade.CreateNewDefaultStyle();
+            }
+            else
+            {
+                facade.CreateNewMelonStyle();
             }
         }
 

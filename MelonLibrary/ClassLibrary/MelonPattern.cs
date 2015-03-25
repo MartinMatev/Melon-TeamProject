@@ -4,8 +4,8 @@ namespace MelonLibrary
 {
     public class MelonPattern : StylePattern, IStylePattern
     {
-        public MelonPattern(Font font, PageSize pageSize, Image header, bool pageNumber)
-            :base(font, pageSize, header, pageNumber)
+        public MelonPattern(Font font, Document pageSize, Image header, bool pageNumber, StylePattern.PatternType patternType)
+            : base(font, pageSize, header, pageNumber, patternType)
         {
         }
     }

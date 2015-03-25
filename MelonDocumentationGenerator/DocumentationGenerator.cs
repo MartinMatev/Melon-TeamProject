@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using MelonLibrary;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using Paragraph = MelonLibrary.Paragraph;
 
 namespace MelonDocumentationGenerator
 {
@@ -8,6 +11,9 @@ namespace MelonDocumentationGenerator
     {
         private List<IHuman> teamMembers;
         private List<IResource> resources;
+        private StylePattern stylePattern;
+        private MelonPattern melonPattern;
+        private DefaultPattern defaultPattern;
         private GeneralProjetctInfo generalInfo;
         private ProjectGit projectGitInfo;
         private Paragraph mainProjectDescription;
@@ -52,6 +58,23 @@ namespace MelonDocumentationGenerator
                 }
 
                 this.teamMembers = value;
+            }
+        }
+
+        public StylePattern StylePattern
+        {
+            get
+            {
+                return this.stylePattern;
+            }
+            set
+            {
+                if (value == null)
+                {
+                    throw new ArgumentNullException("Pattern cannot be null");
+                }
+
+                this.stylePattern = value;
             }
         }
        
@@ -112,6 +135,30 @@ namespace MelonDocumentationGenerator
         {
             projectGitInfo.RepositoryName = repositoryName;
             projectGitInfo.Url = repositoryUrl;
+        }
+
+        public void CreateNewDefaultStyle()
+        {
+            // TO DO - Move things where they belong
+            var pageSize = new Document(PageSize.A4);
+            var bfTimes = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, false);
+            var times = new Font(bfTimes, 12, Font.NORMAL);
+            // DONT' SLACK
+
+            this.defaultPattern = new DefaultPattern(times, pageSize, Image.GetInstance(new Uri(System.IO.Path.GetFullPath("../../Images/Koala.jpg"))), true, StylePattern.PatternType.Default);
+            this.StylePattern = defaultPattern;
+        }
+
+        public void CreateNewMelonStyle()
+        {
+            // TO DO - Move things where they belong
+            var pageSize = new Document(PageSize.A4);
+            var helvetica = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, false);
+            var times = new Font(helvetica, 12, Font.ITALIC);
+            // DONT' SLACK
+
+            this.melonPattern = new MelonPattern(times, pageSize, Image.GetInstance(new Uri(System.IO.Path.GetFullPath("../../Images/Penguins.jpg"))), false, StylePattern.PatternType.Melon);
+            this.StylePattern = this.melonPattern;
         }
 
         public void ProjectDescriptionChanged(string textChanged)
