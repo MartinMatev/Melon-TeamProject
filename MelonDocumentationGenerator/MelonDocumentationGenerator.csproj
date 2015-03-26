@@ -115,6 +115,10 @@
       <Project>{d755f31f-6601-44ac-b253-40f8f79938d1}</Project>
       <Name>MelonLibrary</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WPF.Themes\WPF.Themes.csproj">
+      <Project>{cd3cd636-d63e-4bd5-9fe9-2b63da6f0616}</Project>
+      <Name>WPF.Themes</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="melon_icon.ico" />
@@ -129,6 +133,9 @@
     <Resource Include="Images\default_one.jpg" />
     <Resource Include="Images\Koala.jpg" />
     <Resource Include="Images\Penguins.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\background.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

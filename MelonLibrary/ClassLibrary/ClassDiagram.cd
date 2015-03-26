@@ -10,13 +10,6 @@
   </Class>
   <Class Name="MelonLibrary.Resource" Collapsed="true">
     <Position X="5.75" Y="5" Width="1.5" />
-    <NestedTypes>
-      <Enum Name="MelonLibrary.Resource.ResourceType" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>ClassLibrary\Resource.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
     <TypeIdentifier>
       <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ClassLibrary\Resource.cs</FileName>
@@ -42,16 +35,8 @@
   <Class Name="MelonLibrary.GeneralProjetctInfo" Collapsed="true">
     <Position X="4.25" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAACIAAAAgAAAAAQAAAAUAAAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAgAAACIEAAAgBAAAAQAAAAEAAAAAAAAA=</HashCode>
       <FileName>ClassLibrary\GeneralProjetctInfo.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="MelonLibrary.Screenshot" Collapsed="true">
-    <Position X="7" Y="6.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAgAAAAIAAABAAAAAAAAAAAAAAABAAAAAA=</HashCode>
-      <FileName>ClassLibrary\Screenshot.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -74,7 +59,7 @@
   <Class Name="MelonLibrary.StylePattern" Collapsed="true">
     <Position X="0.5" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>BAIAAAAAgAAAAAAAAAEAAAAAAAAAAAAAAAEAEAACABA=</HashCode>
+      <HashCode>AAIAAAEAgAgAAAAIAAAAAAAAAAAAAAAAAAEAEAACABA=</HashCode>
       <FileName>ClassLibrary\StylePattern.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -89,10 +74,7 @@
   </Class>
   <Class Name="MelonDocumentationGeerator.DocumentationGenerator">
     <Position X="0.5" Y="3" Width="4" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>DocumentationGenerator.cs</FileName>
-    </TypeIdentifier>
+    <TypeIdentifier />
   </Class>
   <Class Name="MelonLibrary.ProjectEntity">
     <Position X="5.25" Y="3" Width="3.5" />
@@ -133,6 +115,14 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Struct Name="MelonLibrary.Screenshot" Collapsed="true">
+    <Position X="7" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAgAABAIAAABAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>ClassLibrary\Screenshot.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Struct>
   <Interface Name="MelonLibrary.IHuman" Collapsed="true">
     <Position X="5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
@@ -164,7 +154,7 @@
   <Interface Name="MelonLibrary.IStylePattern" Collapsed="true">
     <Position X="9.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ClassLibrary\IStylePattern.cs</FileName>
     </TypeIdentifier>
   </Interface>

@@ -5,7 +5,7 @@ using System.Windows.Media;
 using Microsoft.Win32;
 using  PathIO = System.IO.Path;
 using System.Windows.Media.Imaging;
-
+using WPF.Themes;
 
 namespace MelonDocumentationGenerator
 {
@@ -25,6 +25,23 @@ namespace MelonDocumentationGenerator
             InitializeComponent();
             facade = new DocumentationGenerator();
             rbTypeMember = rbTrainee;
+        }
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            themes.ItemsSource = ThemeManager.GetThemes();
+        }
+        private void themes_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (e.AddedItems.Count > 0)
+            {
+                string theme = e.AddedItems[0].ToString();
+
+                // Window Level
+                // this.ApplyTheme(theme);
+
+                // Application Level
+                // Application.Current.ApplyTheme(theme);
+            }
         }
 
         private void SubmitGeneralInfo(object sender, RoutedEventArgs e)
