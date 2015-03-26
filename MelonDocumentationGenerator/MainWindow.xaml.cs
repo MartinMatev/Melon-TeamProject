@@ -26,21 +26,21 @@ namespace MelonDocumentationGenerator
             facade = new DocumentationGenerator();
             rbTypeMember = rbTrainee;
         }
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             themes.ItemsSource = ThemeManager.GetThemes();
+            rbTypeMember.IsChecked = true;
         }
         private void themes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             if (e.AddedItems.Count > 0)
             {
                 string theme = e.AddedItems[0].ToString();
-
                 // Window Level
                 // this.ApplyTheme(theme);
-
                 // Application Level
-                // Application.Current.ApplyTheme(theme);
+                 Application.Current.ApplyTheme(theme);
             }
         }
 
@@ -276,5 +276,6 @@ namespace MelonDocumentationGenerator
         {
             this.statusLabel_projectRepositoryInfo.Content = String.Empty;
         }
+
     }
 }

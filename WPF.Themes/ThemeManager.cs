@@ -27,15 +27,16 @@
             { 
                 "ExpressionDark", "ExpressionLight", 
                 //"RainierOrange", "RainierPurple", "RainierRadialBlue", 
-                "ShinyBlue", "ShinyRed", 
-                //"ShinyDarkTeal", "ShinyDarkGreen", "ShinyDarkPurple",
+               // "ShinyBlue", "ShinyRed", 
+                "ShinyDarkPurple",
                 "DavesGlossyControls", 
-                "WhistlerBlue", 
-                "BureauBlack", "BureauBlue", 
+                //"WhistlerBlue", 
+                //"BureauBlack", "BureauBlue", 
                 "BubbleCreme", 
                 "TwilightBlue",
-                "UXMusingsRed", "UXMusingsGreen", 
+               // "UXMusingsRed", "UXMusingsGreen", 
                 //"UXMusingsRoughRed", "UXMusingsRoughGreen", 
+               // "WhistlerBlue",
                 "UXMusingsBubblyBlue"
             };
             return themes;

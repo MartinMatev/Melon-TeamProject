@@ -13,7 +13,7 @@
         <Border Background="White" Height="30" BorderBrush="Black" BorderThickness="0,0,0,1" Margin="0,-350,0,0">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Center">
                 <TextBlock Text="Theme: " Margin="5,0,0,0"   />
-                <ComboBox x:Name="themes" Width="150" Height="20" SelectionChanged="themes_SelectionChanged" SelectedIndex="0" />
+                <ComboBox x:Name="themes" Width="150" Height="20" SelectionChanged="themes_SelectionChanged" SelectedIndex="0" Cursor="Arrow" />
             </StackPanel>
         </Border>
 
@@ -28,29 +28,29 @@
 					Width="90">_Course:</Label>
                     <TextBlock Height="21" Margin="110,-260,10,0" Text="OOP, CSharp Part I etc..." 
                     Foreground="LightSteelBlue" Visibility="{Binding ElementName=tbCourse, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                    <TextBox Height="21" Margin="110,10,10,0" Name="tbCourse" 
-					VerticalAlignment="Top" Background="Transparent"/>
+                    <TextBox Height="35" Margin="110,10,10,0" Name="tbCourse" 
+					VerticalAlignment="Top" Background="Transparent" Cursor="Pen"/>
                     <Label Height="37" Margin="10,60,0,0" Name="lblNameTeam" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" 
 					Width="90">_Team Name:</Label>
-                    <TextBox Height="21" Margin="110,60,10,0" Name="tbNameTeam" 
-					VerticalAlignment="Top"/>
+                    <TextBox Height="35" Margin="110,60,10,0" Name="tbNameTeam" 
+					VerticalAlignment="Top" Cursor="Pen"/>
                     <Label Height="37" Margin="10,110,0,0" Name="lblProjectTypeInfo" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" 
 					Width="110">_Project Type:</Label>
                     <TextBlock Height="21" Margin="110,-60,10,0" Text="Game, Business Application etc..." 
                     Foreground="LightSteelBlue" Visibility="{Binding ElementName=tbProjectTypeInfo, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
-                    <TextBox Height="21" Margin="110,110,10,0" Name="tbProjectTypeInfo" 
-					VerticalAlignment="Top" Background="Transparent"/>
+                    <TextBox Height="35" Margin="110,110,10,0" Name="tbProjectTypeInfo" 
+					VerticalAlignment="Top" Background="Transparent" Cursor="Pen"/>
                     <Label Height="37" Margin="10,160,0,0" Name="lblProjectName" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" 
 					Width="110">_Project Name:</Label>
-                    <TextBox Height="21" Margin="110,160,10,0" Name="tbProjectName" 
-					VerticalAlignment="Top"/>
-                    <Label Height="37" Margin="200,190,0,0" Name="statusLabel_generlInfo" 
+                    <TextBox Height="35" Margin="110,160,10,0" Name="tbProjectName" 
+					VerticalAlignment="Top" Cursor="Pen"/>
+                    <Label Height="37" Margin="200,200,0,0" Name="statusLabel_generlInfo" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Red"
 					Width="110"/>
-                    <Button Width="455" Height="35" Margin="110,190,10,0" Click="SubmitGeneralInfo">
+                    <Button Width="455" Height="35" Margin="110,190,10,0" Click="SubmitGeneralInfo" Cursor="Hand">
                         Submit
                     </Button>
                 </Grid>
@@ -60,25 +60,25 @@
                     <Label Height="37" Margin="10,10,0,0" Name="lblFName" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" 
 					Width="90">_First Name:</Label>
-                    <TextBox Height="21" Margin="110,10,10,0" Name="tbFName"
-					VerticalAlignment="Top" Background="Transparent"/>
+                    <TextBox Height="35" Margin="110,10,10,0" Name="tbFName"
+					VerticalAlignment="Top" Cursor="Pen"/>
                     <Label Height="37" Margin="10,60,0,0" Name="lblLName" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" 
 					Width="90">_Last Name:</Label>
-                    <TextBox Height="21" Margin="110,60,10,0" Name="tbLastName" 
-					VerticalAlignment="Top"/>
+                    <TextBox Height="35" Margin="110,60,10,0" Name="tbLastName" 
+					VerticalAlignment="Top" Cursor="Pen"/>
                     <Label Height="37" Margin="10,110,0,0" Name="lblUserName" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" 
 					Width="110">_User Name:</Label>
-                    <TextBox Height="21" Margin="110,110,10,0" Name="tbUserName" 
-					VerticalAlignment="Top"/>
+                    <TextBox Height="35" Margin="110,110,10,0" Name="tbUserName" 
+					VerticalAlignment="Top" Cursor="Pen"/>
                     <CheckBox Name="cxbHasParticipated" Margin="110,150,0,0" IsChecked="True">Has participated</CheckBox>
                     <Label Height="37" Margin="250,150,0,0" Name="lblTeamMemberMessage" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" 
 					Width="300" Foreground="Red"/>
                     <RadioButton GroupName="rbTypeMember"  Name="rbTrainer"  Height="37" Margin="150,80,0,0" Checked="HandleCheckTeamMember">Trainer</RadioButton>
-                    <RadioButton GroupName="rbTypeMember" Name="rbTrainee" Height="37" Margin="250,80,0,0" Checked="HandleCheckTeamMember" IsChecked="True">Trainee</RadioButton>
-                    <Button Width="455" Height="35" Margin="110,190,10,0" Click="AddTeamMember" LostFocus="TeamMemberSubmit_OnLostFocus">
+                    <RadioButton GroupName="rbTypeMember" Name="rbTrainee" Height="37" Margin="250,80,0,0" Checked="HandleCheckTeamMember">Trainee</RadioButton>
+                    <Button Width="455" Height="35" Margin="110,190,10,0" Click="AddTeamMember" LostFocus="TeamMemberSubmit_OnLostFocus" Cursor="Hand">
                         Add Team Member
                     </Button>
                 </Grid>
@@ -94,7 +94,7 @@
                 <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
                     <StackPanel Orientation="Vertical">
                         <Label>Description:</Label>
-                        <TextBox x:Name="tb_screenshotDescription" Width="430" Height="100" Margin="5" ></TextBox>
+                        <TextBox x:Name="tb_screenshotDescription" Width="430" Height="100" Margin="5" Cursor="" ></TextBox>
                         <TextBlock x:Name="tbl_screenshotStatus" Width="430" TextWrapping="WrapWithOverflow"></TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
@@ -112,21 +112,21 @@
                     <Label Height="37" Margin="10,10,0,0" Name="lblRepositoryName" 
                     VerticalAlignment="Top" HorizontalAlignment="Left" 
                     Width="110">_Repository Name:</Label>
-                    <TextBlock Height="21" Margin="135,17,9.4,270.8" Text="Enter Repository Name..." 
+                    <TextBlock Height="35" Margin="135,14,9.4,270.8" Text="Enter Repository Name..." 
                     Foreground="LightSteelBlue" Visibility="{Binding ElementName=tbRepositoryName, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" Grid.ColumnSpan="2" />
-                    <TextBox Height="25" Margin="130,10,9.4,0" Name="tbRepositoryName" 
-                    VerticalAlignment="Top" Background="Transparent" Grid.ColumnSpan="2"/>
+                    <TextBox Height="35" Margin="130,10,9.4,0" Name="tbRepositoryName" 
+                    VerticalAlignment="Top" Background="Transparent" Grid.ColumnSpan="2" Cursor="Pen"/>
                     <Label Height="37" Margin="10,60,0,0" Name="lblRepositoryURL" 
                     VerticalAlignment="Top" HorizontalAlignment="Left" 
                     Width="110">_Repository URL:</Label>
-                    <TextBlock Height="21" Margin="135,67,9.4,220.8" Text="Enter Repository URL..." 
+                    <TextBlock Height="30" Margin="135,64,9.4,220.8" Text="Enter Repository URL..." 
                     Foreground="LightSteelBlue" Visibility="{Binding ElementName=tbRepositoryUrl, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" Grid.ColumnSpan="2" />
-                    <TextBox Height="25" Margin="130,60,9.4,0" Name="tbRepositoryUrl" 
-                    VerticalAlignment="Top" Background="Transparent" Grid.ColumnSpan="2"/>
-                    <Label Height="37" Margin="200,90,0,0" Name="statusLabel_projectRepositoryInfo" 
+                    <TextBox Height="40" Margin="130,60,9.4,0" Name="tbRepositoryUrl" 
+                    VerticalAlignment="Top" Background="Transparent" Grid.ColumnSpan="2" Cursor="Pen"/>
+                    <Label Height="37" Margin="200,150,0,0" Name="statusLabel_projectRepositoryInfo" 
                     VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Red"
                     Width="110" Grid.ColumnSpan="2"/>
-                    <Button Width="455" Height="35" Margin="148,234,47.4,43.8" Click="SubmitProjectRepositoryInfo" LostFocus="GitUrlSubmit_LostFocus" Grid.ColumnSpan="2">
+                    <Button Width="455" Height="35" Margin="148,215,47.4,43.8" Click="SubmitProjectRepositoryInfo" LostFocus="GitUrlSubmit_LostFocus" Grid.ColumnSpan="2" Cursor="Hand">
                         Submit
                     </Button>
                 </Grid>
@@ -167,13 +167,13 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,40,0,0">
                         <Label x:Name="ResourceNameLabel">Resource Name:</Label>
-                        <TextBox Width="450" Margin="50,0,0,0" x:Name="ResourceName"></TextBox>
+                        <TextBox Height="35" Width="450" Margin="50,0,0,0" x:Name="ResourceName" Cursor="Pen"></TextBox>
                     </StackPanel>
                     <StackPanel Orientation="Horizontal" Margin="0,40,0,0">
                         <Label Margin="10,0,0,0" x:Name="ResourceUrlLabel">Resource URL:</Label>
-                        <TextBox Width="450" Margin="50,0,0,0" x:Name="ResourceURL"></TextBox>
+                        <TextBox Height="35" Width="450" Margin="50,0,0,0" x:Name="ResourceURL"></TextBox>
                     </StackPanel>
-                    <Button  Width="455" Height="35" Margin="95,40,0,0"  Click="ExternalResourceSubmit">Submit Resource</Button>
+                    <Button  Width="455" Height="35" Margin="95,40,0,0"  Click="ExternalResourceSubmit" Cursor="Hand">Submit Resource</Button>
                 </StackPanel>
             </TabItem>
             <TabItem Header="_Select Style">
@@ -181,17 +181,17 @@
                     <Label Height="37" Margin="50,26,0,0" Name="lblStyleOptions" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" 
 					Width="196">_Choose the style of the document:</Label>
-                    <ComboBox Height="25" Margin="259,-34,0,0" Name="cmbStyle"
+                    <ComboBox Height="35" Margin="259,-34,0,0" Name="cmbStyle"
                           VerticalAlignment="Top" HorizontalAlignment="Left"
                           Width="196" IsReadOnly="True" IsEditable="True" Text="Choose a style"
-                          SelectionChanged="OnStyleComboBoxChanged">
+                          SelectionChanged="OnStyleComboBoxChanged" Cursor="Arrow">
                         <ComboBoxItem Tag="default">Default Pattern</ComboBoxItem>
                         <ComboBoxItem Tag="melon">Melon Pattern</ComboBoxItem>
                     </ComboBox>
                     <Button Width="80" Height="22" Margin="391,-39,-59,8" 
                             Name="buttonStylePatternChosen" Click="OnStyleButtonClick"
                             ToolTip="I won't kidnap you, I swear..."
-                            Background="Transparent" Content="Free candy">
+                            Background="Transparent" Content="Free candy" Cursor="Hand">
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="IsEnabled" Value="False" />
