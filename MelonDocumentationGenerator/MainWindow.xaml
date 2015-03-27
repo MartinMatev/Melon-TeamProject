@@ -173,7 +173,7 @@
                         <Label Margin="10,0,0,0" x:Name="ResourceUrlLabel">Resource URL:</Label>
                         <TextBox Height="35" Width="450" Margin="50,0,0,0" x:Name="ResourceURL"></TextBox>
                     </StackPanel>
-                    <Button  Width="455" Height="35" Margin="95,40,0,0"  Click="ExternalResourceSubmit" Cursor="Hand">Submit Resource</Button>
+                    <Button  Width="380" Height="35" Margin="80,40,0,0"  Click="ExternalResourceSubmit" Cursor="Hand">Submit Resource</Button>
                 </StackPanel>
             </TabItem>
             <TabItem Header="_Select Style">
