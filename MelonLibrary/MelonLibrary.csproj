@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClassLibrary\DefaultPattern.cs" />
+    <Compile Include="ClassLibrary\Enums\PatternType.cs" />
     <Compile Include="ClassLibrary\ExternalResource.cs" />
     <Compile Include="ClassLibrary\GeneralProjetctInfo.cs" />
     <Compile Include="ClassLibrary\Human.cs" />
