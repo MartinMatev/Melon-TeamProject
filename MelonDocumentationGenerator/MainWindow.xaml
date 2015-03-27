@@ -83,10 +83,10 @@
                     </Button>
                 </Grid>
             </TabItem>
-            <TabItem Header="_Project Description">
+            <TabItem Header="_Project Description" Height="22" Margin="-2.4,-2,-1.6,0" VerticalAlignment="Top">
                 <StackPanel>
                     <Label Margin="120,5,5,5">General Project description:</Label>
-                    <TextBox x:Name="tbr_mainProjectDescription" Width="400" Height="200"></TextBox>
+                    <TextBox x:Name="tbr_mainProjectDescription" Width="400" Height="200" TextWrapping="Wrap" AcceptsReturn="True"></TextBox>
                     <Button x:Name="btn_mainDescriptionSubmit" Click="SubmitMainDescription" Width="400" Height="35" Margin="10">Submit Project Description</Button>
                 </StackPanel>
             </TabItem>
@@ -94,7 +94,7 @@
                 <StackPanel Orientation="Horizontal" Margin="20,0,0,0">
                     <StackPanel Orientation="Vertical">
                         <Label>Description:</Label>
-                        <TextBox x:Name="tb_screenshotDescription" Width="430" Height="100" Margin="5" Cursor="" ></TextBox>
+                        <TextBox x:Name="tb_screenshotDescription" Width="430" Height="100" Margin="5" TextWrapping="Wrap" AcceptsReturn="True" ></TextBox>
                         <TextBlock x:Name="tbl_screenshotStatus" Width="430" TextWrapping="WrapWithOverflow"></TextBlock>
                     </StackPanel>
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
