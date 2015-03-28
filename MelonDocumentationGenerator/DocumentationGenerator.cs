@@ -139,25 +139,13 @@ namespace MelonDocumentationGenerator
 
         public void CreateNewDefaultStyle()
         {
-            // TO DO - Move things where they belong
-            var pageSize = new Document(PageSize.A4);
-            var bfTimes = BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, false);
-            var times = new Font(bfTimes, 12, Font.NORMAL);
-            // DONT' SLACK
-
-            this.defaultPattern = new DefaultPattern(times, pageSize, Image.GetInstance(new Uri(System.IO.Path.GetFullPath("../../Images/Koala.jpg"))), true, StylePattern.PatternType.Default);
+            this.defaultPattern = new DefaultPattern();
             this.StylePattern = defaultPattern;
         }
 
         public void CreateNewMelonStyle()
         {
-            // TO DO - Move things where they belong
-            var pageSize = new Document(PageSize.A4);
-            var helvetica = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, false);
-            var times = new Font(helvetica, 12, Font.ITALIC);
-            // DONT' SLACK
-
-            this.melonPattern = new MelonPattern(times, pageSize, Image.GetInstance(new Uri(System.IO.Path.GetFullPath("../../Images/Penguins.jpg"))), false, StylePattern.PatternType.Melon);
+            this.melonPattern = new MelonPattern();
             this.StylePattern = this.melonPattern;
         }
 

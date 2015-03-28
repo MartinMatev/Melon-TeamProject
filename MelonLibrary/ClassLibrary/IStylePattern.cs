@@ -1,7 +1,8 @@
-﻿namespace MelonLibrary
+﻿using MelonLibrary.ClassLibrary.Enums;
+namespace MelonLibrary
 {
     public interface IStylePattern
     {
-        StylePattern.PatternType TypePattern { get; set; }
+        PatternType TypePattern { get; set; }
     }
 }

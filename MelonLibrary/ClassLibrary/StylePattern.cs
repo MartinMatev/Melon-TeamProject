@@ -1,5 +1,6 @@
 ﻿using System;
 using iTextSharp.text;
+using MelonLibrary.ClassLibrary.Enums;
 
 namespace MelonLibrary
 {
@@ -10,7 +11,7 @@ namespace MelonLibrary
         protected Image templateImage;
         protected bool pageNumber;
 
-        public StylePattern(Font font, Document pageSize, Image template, bool pageNumber, StylePattern.PatternType patternType)
+        public StylePattern(Font font, Document pageSize, Image template, bool pageNumber, PatternType patternType)
         {
             this.Font = font;
             this.PageSize = pageSize;
@@ -82,19 +83,8 @@ namespace MelonLibrary
             }
             set
             {
-                if (value == null)
-                {
-                    throw new ArgumentNullException("Page enumeration is not set");
-                }
-
                 this.pageNumber = value;
             }
-        }
-
-        public enum PatternType
-        {
-            Default,
-            Melon
         }
     }
 }
