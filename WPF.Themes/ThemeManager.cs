@@ -25,7 +25,7 @@
         {
             string[] themes = new string[] 
             { 
-                "ExpressionDark", "ExpressionLight", 
+                "TwilightBlue", "ExpressionDark", "ExpressionLight", 
                 //"RainierOrange", "RainierPurple", "RainierRadialBlue", 
                // "ShinyBlue", "ShinyRed", 
                 "ShinyDarkPurple",
@@ -33,7 +33,6 @@
                 //"WhistlerBlue", 
                 //"BureauBlack", "BureauBlue", 
                 "BubbleCreme", 
-                "TwilightBlue",
                 "PeachDelight",
                // "UXMusingsRed", "UXMusingsGreen", 
                 //"UXMusingsRoughRed", "UXMusingsRoughGreen", 
