@@ -12,11 +12,10 @@ namespace MelonDocumentationGenerator
         private List<IHuman> teamMembers;
         private List<IResource> resources;
         private StylePattern stylePattern;
-        private MelonPattern melonPattern;
-        private DefaultPattern defaultPattern;
         private GeneralProjetctInfo generalInfo;
         private ProjectGit projectGitInfo;
         private Paragraph mainProjectDescription;
+        private bool[] usedResourcesByID;
         private const string EmptyEntry = "not filled";
 
         public DocumentationGenerator()
@@ -25,6 +24,8 @@ namespace MelonDocumentationGenerator
             this.mainProjectDescription = new Paragraph(EmptyEntry);
             this.resources.Add(this.mainProjectDescription);
             this.TeamMembersList = new List<IHuman>();
+            this.stylePattern = new DefaultPattern();
+            this.usedResourcesByID = new bool[6];
         }
 
         public List<IResource> ResourceList
@@ -86,14 +87,17 @@ namespace MelonDocumentationGenerator
 
         public void AddNewTeamMember(string fName, string lName, string uName, string typeMember, bool hasParticipated)
         {
+
             if (typeMember.Equals("Trainee"))
             {
                 this.teamMembers.Add(new ProjectParticipant(fName, lName, uName, hasParticipated));
+
             }
             else
             {
                 this.teamMembers.Add(new TelerikTrainer(fName, lName, uName));
             }
+            this.usedResourcesByID[(int)Resource.ResourceType.ProjectParticipant] = true;
         }
 
         public void CreateNewGeneralProjectInfo(string projectType,string nameTeam,string course,string projectName)
@@ -101,7 +105,8 @@ namespace MelonDocumentationGenerator
             this.generalInfo = new GeneralProjetctInfo(projectType, nameTeam, course, projectName,
                 Resource.ResourceType.GeneralProjectInfo);
 
-            this.resources.Add(this.generalInfo);           
+            this.resources.Add(this.generalInfo);
+            this.usedResourcesByID[(int)Resource.ResourceType.GeneralProjectInfo] = true;
         }
 
         public void CreateNewProjectGit(string repositoryName, string repositoryUrl)
@@ -109,6 +114,8 @@ namespace MelonDocumentationGenerator
             this.projectGitInfo = new ProjectGit(repositoryName, repositoryUrl, Resource.ResourceType.GitHubRepository);
 
             this.resources.Add(this.projectGitInfo);
+            this.usedResourcesByID[(int)Resource.ResourceType.GitHubRepository] = true;
+
         }
 
         public bool GeneralProjectExist()
@@ -137,31 +144,35 @@ namespace MelonDocumentationGenerator
             projectGitInfo.Url = repositoryUrl;
         }
 
-        public void CreateNewDefaultStyle()
+        public void SetStylePattern(string patternType)
         {
-            this.defaultPattern = new DefaultPattern();
-            this.StylePattern = defaultPattern;
-        }
-
-        public void CreateNewMelonStyle()
-        {
-            this.melonPattern = new MelonPattern();
-            this.StylePattern = this.melonPattern;
+            switch (patternType)
+            {
+                case "melon":
+                    this.stylePattern = new MelonPattern();
+                    break;
+                default:
+                    this.stylePattern = new DefaultPattern();
+                    break;
+            }
         }
 
         public void ProjectDescriptionChanged(string textChanged)
         {
             this.mainProjectDescription.Text = textChanged;
+            this.usedResourcesByID[(int)Resource.ResourceType.Paragraph] = true;
         }
 
         public void AddScreenshot(string imagePath, string description)
         {
             this.resources.Add(new Screenshot(description, imagePath));
+            this.usedResourcesByID[(int)Resource.ResourceType.Screenshot] = true;
         }
 
         public void AddResource(string name, string url)
         {
             this.resources.Add(new ExternalResource(name, url));
+            this.usedResourcesByID[(int)Resource.ResourceType.ExternalResource] = true;
         }
     }
 }

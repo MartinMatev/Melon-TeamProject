@@ -18,7 +18,9 @@ namespace MelonDocumentationGenerator
         private DocumentationGenerator facade;
         private OpenFileDialog screenshotDialog = new OpenFileDialog();
         private Nullable<bool> screenshotDialogResult;
+        private Nullable<bool> saveDialog;
         private string lastImageChosen;
+        private string savePath;
 
         public MainWindow()
         {
@@ -262,13 +264,13 @@ namespace MelonDocumentationGenerator
                 MessageBox.Show("I LIED....");
             }
 
-            if (comboboxItem.Content.ToString() == "Default Pattern")
+            if (comboboxItem.Content.ToString() == "Melon Pattern")
             {
-                facade.CreateNewDefaultStyle();
+                facade.SetStylePattern("melon");
             }
-            else
+            else if (comboboxItem.Content.ToString() == "Default Pattern")
             {
-                facade.CreateNewMelonStyle();
+                facade.SetStylePattern("default");
             }
         }
 
@@ -276,6 +278,38 @@ namespace MelonDocumentationGenerator
         {
             this.statusLabel_projectRepositoryInfo.Content = String.Empty;
         }
+
+        private void SaveTo(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+           
+            save.DefaultExt = ".pdf";
+            save.Filter = "Pdf Files|*.pdf";
+
+            this.saveDialog= save.ShowDialog();
+
+            if (this.saveDialog == true)
+            {
+                this.savePath= save.FileName;
+            }
+
+        }
+
+        private void SavePDFFile(object sender, RoutedEventArgs e)
+        {
+            if(string.IsNullOrEmpty(this.savePath))
+            {
+                lblErrorMessage.Content = "Please select save path!";
+            }
+            else
+            {
+                lblErrorMessage.Content = String.Empty;
+                // 
+            }
+        }
+
+
+
 
     }
 }

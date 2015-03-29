@@ -55,7 +55,7 @@
                     </Button>
                 </Grid>
             </TabItem>
-            <TabItem Header="_Team Members">
+            <TabItem Header="_Team Members" Height="23" Margin="0,-0.4,0.4,-0.2" VerticalAlignment="Bottom">
                 <Grid Margin="0,0,0,0" Name="teamMemberGrid">
                     <Label Height="37" Margin="10,10,0,0" Name="lblFName" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" 
@@ -135,28 +135,28 @@
             <TabItem Header="_Used Resources">
                 <StackPanel Orientation="Vertical">
                     <StackPanel Orientation="Horizontal" Margin="0,20,0,0" HorizontalAlignment="Center">
-                        <Button Margin="10,0,10,0" Click="LoadStackResource">
+                        <Button Margin="10,0,10,0" Click="LoadStackResource" Cursor="Hand">
                             <Button.Template>
                                 <ControlTemplate>
                                     <Image Source="Images/stack_logo.png" Height="55" Margin="10,0,10,0"></Image>
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
-                        <Button Margin="10,0,10,0" Click="LoadMsdnResource">
+                        <Button Margin="10,0,10,0" Click="LoadMsdnResource" Cursor="Hand">
                             <Button.Template>
                                 <ControlTemplate>
                                     <Image Source="Images/msdn_logo.png" Height="55" Margin="10,0,10,0"></Image>
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
-                        <Button Margin="10,0,10,0" Click="LoadCodeProjectResource">
+                        <Button Margin="10,0,10,0" Click="LoadCodeProjectResource" Cursor="Hand">
                             <Button.Template>
                                 <ControlTemplate>
                                     <Image Source="Images/codepr_logo.png" Height="55" Margin="10,0,10,0"></Image>
                                 </ControlTemplate>
                             </Button.Template>
                         </Button>
-                        <Button Margin="10,0,10,0" Click="LoadWikipediaResource">
+                        <Button Margin="10,0,10,0" Click="LoadWikipediaResource" Cursor="Hand">
                             <Button.Template>
                                 <ControlTemplate>
                                     <Image Source="Images/wiki_logo.png" Height="55" Margin="10,0,10,0"></Image>
@@ -183,7 +183,7 @@
 					Width="196">_Choose the style of the document:</Label>
                     <ComboBox Height="35" Margin="259,-34,0,0" Name="cmbStyle"
                           VerticalAlignment="Top" HorizontalAlignment="Left"
-                          Width="196" IsReadOnly="True" IsEditable="True" Text="Choose a style"
+                          Width="196" IsReadOnly="True" IsEditable="True" Text="Default"
                           SelectionChanged="OnStyleComboBoxChanged" Cursor="Arrow">
                         <ComboBoxItem Tag="default">Default Pattern</ComboBoxItem>
                         <ComboBoxItem Tag="melon">Melon Pattern</ComboBoxItem>
@@ -207,11 +207,15 @@
                         </Button.Style>
                     </Button>
                     <Label Height="37" Margin="30,12,0,0" x:Name="lblStylePreview">Preview of the style of your choosing:</Label>
-                    <Image Source ="Images/default_one.jpg" Height="190" Width="500" x:Name="imgStylePreview"></Image>
+                    <Image Source ="Images/Koala.jpg" Height="190" Width="500" x:Name="imgStylePreview"></Image>
                 </StackPanel>
             </TabItem>
             <TabItem Header="_Export Documentation">
-
+                <Grid>
+                    <Label Name="lblErrorMessage" Width="380" Height="35" Margin="80,-100,0,0" ></Label>
+                    <Button  Width="380" Height="35" Margin="80,10,0,0"  Click="SaveTo" Cursor="Hand">Save To</Button>
+                    <Button  Width="380" Height="35" Margin="80,90,0,0"  Click="SavePDFFile" Cursor="Hand">Save</Button>
+                </Grid>
             </TabItem>
         </TabControl>
     </Grid>
