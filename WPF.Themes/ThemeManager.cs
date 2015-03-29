@@ -25,18 +25,13 @@
         {
             string[] themes = new string[] 
             { 
-                "TwilightBlue", "ExpressionDark", "ExpressionLight", 
-                //"RainierOrange", "RainierPurple", "RainierRadialBlue", 
-               // "ShinyBlue", "ShinyRed", 
+                "TwilightBlue", 
+                "ExpressionDark", 
+                "ExpressionLight", 
                 "ShinyDarkPurple",
                 "DavesGlossyControls", 
-                //"WhistlerBlue", 
-                //"BureauBlack", "BureauBlue", 
                 "BubbleCreme", 
                 "PeachDelight",
-               // "UXMusingsRed", "UXMusingsGreen", 
-                //"UXMusingsRoughRed", "UXMusingsRoughGreen", 
-               // "WhistlerBlue",
                 "UXMusingsBubblyBlue"
             };
             return themes;
