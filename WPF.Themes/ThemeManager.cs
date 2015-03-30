@@ -15,7 +15,7 @@
             if (theme != null)
             {
                 Assembly assembly = Assembly.LoadFrom("WPF.Themes.dll");
-                string packUri = String.Format(@"/WPF.Themes;component/{0}/Theme.xaml", theme);
+                string packUri = String.Format(@"/WPF.Themes;component/ThemeStyles/{0}/Theme.xaml", theme);
                 return Application.LoadComponent(new Uri(packUri, UriKind.Relative)) as ResourceDictionary;
             }
             return null;
