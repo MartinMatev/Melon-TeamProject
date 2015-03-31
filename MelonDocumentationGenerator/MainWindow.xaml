@@ -83,7 +83,7 @@
                     </Button>
                 </Grid>
             </TabItem>
-            <TabItem Header="_Project Description" Height="22" Margin="-2.4,-2,-1.6,0" VerticalAlignment="Top">
+            <TabItem Header="_Project Description">
                 <StackPanel>
                     <Label Margin="120,5,5,5">General Project description:</Label>
                     <TextBox x:Name="tbr_mainProjectDescription" Width="400" Height="200" TextWrapping="Wrap" AcceptsReturn="True"></TextBox>
