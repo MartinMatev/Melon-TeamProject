@@ -25,26 +25,26 @@
                 <Grid Margin="0,0,0,0" Name="generalInfoGrid">
                     <Label Height="37" Margin="10,10,0,0" Name="lblCourse" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" 
-					Width="90">_Course:</Label>
+					Width="90">Course:</Label>
                     <TextBlock Height="21" Margin="110,-260,10,0" Text="OOP, CSharp Part I etc..." 
                     Foreground="LightSteelBlue" Visibility="{Binding ElementName=tbCourse, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
                     <TextBox Height="35" Margin="110,10,10,0" Name="tbCourse" 
 					VerticalAlignment="Top" Background="Transparent" Cursor="Pen"/>
                     <Label Height="37" Margin="10,60,0,0" Name="lblNameTeam" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" 
-					Width="90">_Team Name:</Label>
+					Width="90">Team Name:</Label>
                     <TextBox Height="35" Margin="110,60,10,0" Name="tbNameTeam" 
 					VerticalAlignment="Top" Cursor="Pen"/>
                     <Label Height="37" Margin="10,110,0,0" Name="lblProjectTypeInfo" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" 
-					Width="110">_Project Type:</Label>
+					Width="110">Project Type:</Label>
                     <TextBlock Height="21" Margin="110,-60,10,0" Text="Game, Business Application etc..." 
                     Foreground="LightSteelBlue" Visibility="{Binding ElementName=tbProjectTypeInfo, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" />
                     <TextBox Height="35" Margin="110,110,10,0" Name="tbProjectTypeInfo" 
 					VerticalAlignment="Top" Background="Transparent" Cursor="Pen"/>
                     <Label Height="37" Margin="10,160,0,0" Name="lblProjectName" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" 
-					Width="110">_Project Name:</Label>
+					Width="110">Project Name:</Label>
                     <TextBox Height="35" Margin="110,160,10,0" Name="tbProjectName" 
 					VerticalAlignment="Top" Cursor="Pen"/>
                     <Label Height="37" Margin="200,200,0,0" Name="statusLabel_generlInfo" 
@@ -55,21 +55,21 @@
                     </Button>
                 </Grid>
             </TabItem>
-            <TabItem Header="_Team Members" Height="23" Margin="0,-0.4,0.4,-0.2" VerticalAlignment="Bottom">
+            <TabItem Header="_Team Members" Height="23">
                 <Grid Margin="0,0,0,0" Name="teamMemberGrid">
                     <Label Height="37" Margin="10,10,0,0" Name="lblFName" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" 
-					Width="90">_First Name:</Label>
+					Width="90">First Name:</Label>
                     <TextBox Height="35" Margin="110,10,10,0" Name="tbFName"
 					VerticalAlignment="Top" Cursor="Pen"/>
                     <Label Height="37" Margin="10,60,0,0" Name="lblLName" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" 
-					Width="90">_Last Name:</Label>
+					Width="90">Last Name:</Label>
                     <TextBox Height="35" Margin="110,60,10,0" Name="tbLastName" 
 					VerticalAlignment="Top" Cursor="Pen"/>
                     <Label Height="37" Margin="10,110,0,0" Name="lblUserName" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" 
-					Width="110">_User Name:</Label>
+					Width="110">User Name:</Label>
                     <TextBox Height="35" Margin="110,110,10,0" Name="tbUserName" 
 					VerticalAlignment="Top" Cursor="Pen"/>
                     <CheckBox Name="cxbHasParticipated" Margin="110,150,0,0" IsChecked="True">Has participated</CheckBox>
@@ -111,14 +111,14 @@
                     </Grid.ColumnDefinitions>
                     <Label Height="37" Margin="10,10,0,0" Name="lblRepositoryName" 
                     VerticalAlignment="Top" HorizontalAlignment="Left" 
-                    Width="110">_Repository Name:</Label>
+                    Width="110">Repository Name:</Label>
                     <TextBlock Height="35" Margin="135,14,9.4,270.8" Text="Enter Repository Name..." 
                     Foreground="LightSteelBlue" Visibility="{Binding ElementName=tbRepositoryName, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" Grid.ColumnSpan="2" />
                     <TextBox Height="35" Margin="130,10,9.4,0" Name="tbRepositoryName" 
                     VerticalAlignment="Top" Background="Transparent" Grid.ColumnSpan="2" Cursor="Pen"/>
                     <Label Height="37" Margin="10,60,0,0" Name="lblRepositoryURL" 
                     VerticalAlignment="Top" HorizontalAlignment="Left" 
-                    Width="110">_Repository URL:</Label>
+                    Width="110">Repository URL:</Label>
                     <TextBlock Height="30" Margin="135,64,9.4,220.8" Text="Enter Repository URL..." 
                     Foreground="LightSteelBlue" Visibility="{Binding ElementName=tbRepositoryUrl, Path=Text.IsEmpty, Converter={StaticResource BooleanToVisibilityConverter}}" Grid.ColumnSpan="2" />
                     <TextBox Height="40" Margin="130,60,9.4,0" Name="tbRepositoryUrl" 
@@ -180,7 +180,7 @@
                 <StackPanel>
                     <Label Height="37" Margin="50,26,0,0" Name="lblStyleOptions" 
 					VerticalAlignment="Top" HorizontalAlignment="Left" 
-					Width="196">_Choose the style of the document:</Label>
+					Width="196">Choose the style of the document:</Label>
                     <ComboBox Height="35" Margin="259,-34,0,0" Name="cmbStyle"
                           VerticalAlignment="Top" HorizontalAlignment="Left"
                           Width="196" IsReadOnly="True" IsEditable="True" Text="Default"
