@@ -50,6 +50,8 @@
   <ItemGroup>
     <Compile Include="ClassLibrary\DefaultPattern.cs" />
     <Compile Include="ClassLibrary\Enums\PatternType.cs" />
+    <Compile Include="ClassLibrary\Exceptions\NotSetFieldOrPropertyException.cs" />
+    <Compile Include="ClassLibrary\Exceptions\NullFieldOrPropertyException.cs" />
     <Compile Include="ClassLibrary\ExternalResource.cs" />
     <Compile Include="ClassLibrary\GeneralProjetctInfo.cs" />
     <Compile Include="ClassLibrary\Human.cs" />
@@ -74,6 +76,7 @@
   <ItemGroup>
     <None Include="ClassLibrary\ClassDiagram.cd" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

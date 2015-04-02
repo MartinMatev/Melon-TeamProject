@@ -1,7 +1,10 @@
-﻿using System;
+﻿using System.Reflection;
+using iTextSharp.text.pdf;
 
 namespace MelonLibrary
 {
+    using System;
+    using MelonLibrary.ClassLibrary.Exceptions;
     public class ExternalResource : Resource, IResource
     {
         private string resourceName;
@@ -21,7 +24,7 @@ namespace MelonLibrary
             {
                 if (String.IsNullOrWhiteSpace(value))
                 {
-                    throw new Exception();
+                    throw new NullFieldOrPropertyException(NullFieldOrPropertyException.ResourceListException);
                 }
 
                 this.resourceName = value;
@@ -35,7 +38,7 @@ namespace MelonLibrary
             {
                 if (String.IsNullOrWhiteSpace(value))
                 {
-                    throw new Exception();
+                    throw new NullFieldOrPropertyException(NullFieldOrPropertyException.InvalidURLException);
                 }
 
                 this.resourceUrl = new Uri(value);
