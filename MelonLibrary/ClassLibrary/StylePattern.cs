@@ -1,6 +1,7 @@
 ﻿using System;
 using iTextSharp.text;
 using MelonLibrary.ClassLibrary.Enums;
+using MelonLibrary.ClassLibrary.Exceptions;
 
 namespace MelonLibrary
 {
@@ -34,7 +35,7 @@ namespace MelonLibrary
 
                 if (value == null)
                 {
-                    throw new ArgumentNullException("Font vaue cannot be null.");
+                    throw new NullFieldOrPropertyException(NullFieldOrPropertyException.FontValueException);
                 }
 
                 this.font = value;
@@ -51,7 +52,7 @@ namespace MelonLibrary
             {
                 if (value == null)
                 {
-                    throw new ArgumentNullException("Page size is not set");
+                    throw new NotSetFieldOrPropertyException(NotSetFieldOrPropertyException.PageSizeException);
                 }
 
                 this.pageSize = value;
@@ -68,7 +69,7 @@ namespace MelonLibrary
             {
                 if (value == null)
                 {
-                    throw new ArgumentNullException("Header image is not set");
+                    throw new NotSetFieldOrPropertyException(NotSetFieldOrPropertyException.HeaderImageException);
                 }
 
                 this.templateImage = value;

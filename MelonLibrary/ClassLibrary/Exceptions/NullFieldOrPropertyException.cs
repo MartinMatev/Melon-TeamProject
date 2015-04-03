@@ -14,8 +14,10 @@ namespace MelonLibrary.ClassLibrary.Exceptions
         public const string StylePatternException = "Style Pattern cannot be Null Or Empty";
         public const string InvalidResourceName = "Resource Name cannot be Null or Empty";
         public const string InvalidURLException = "Invalid URL";
-        public const string InvalidDescriptionName = "Resource Name cannot be Null or Empty";
+        public const string InvalidDescriptionName = "Description cannot be Null or Empty";
         public const string FontValueException = "Font Value cannot be Null";
+        public const string ParagraphTextException = "Paragraph Text cannot be Null";
+
 
         public NullFieldOrPropertyException(string msg) : base(msg)
         {

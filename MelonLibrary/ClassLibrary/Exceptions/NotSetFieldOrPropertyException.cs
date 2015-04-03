@@ -8,8 +8,8 @@
 
     public class NotSetFieldOrPropertyException : ApplicationException
     {
-        public string PageSizeException = "Page Size is not set";
-        public string HeaderImageException = "Header Image is not set";
+        public const string PageSizeException = "Page Size is not set";
+        public const string HeaderImageException = "Header Image is not set";
 
         public NotSetFieldOrPropertyException(string msg) : base(msg)
         {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using MelonLibrary;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
+using MelonLibrary.ClassLibrary.Exceptions;
 using Paragraph = MelonLibrary.Paragraph;
 
 namespace MelonDocumentationGenerator
@@ -38,7 +39,7 @@ namespace MelonDocumentationGenerator
             {
                 if (value == null)
                 {
-                    throw  new ArgumentNullException("Resources");
+                    throw  new NullFieldOrPropertyException(NullFieldOrPropertyException.ResourceListException);
                 }
 
                 this.resources = value;
@@ -55,7 +56,7 @@ namespace MelonDocumentationGenerator
             {
                 if (value == null)
                 {
-                    throw new ArgumentNullException("Members");
+                    throw new NullFieldOrPropertyException(NullFieldOrPropertyException.TeamMembersListException);
                 }
 
                 this.teamMembers = value;
@@ -72,7 +73,7 @@ namespace MelonDocumentationGenerator
             {
                 if (value == null)
                 {
-                    throw new ArgumentNullException("Pattern cannot be null");
+                    throw new NullFieldOrPropertyException(NullFieldOrPropertyException.StylePatternException);
                 }
 
                 this.stylePattern = value;

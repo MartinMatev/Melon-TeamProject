@@ -1,4 +1,5 @@
 ﻿using System;
+using MelonLibrary.ClassLibrary.Exceptions;
 
 namespace MelonLibrary
 {
@@ -24,7 +25,7 @@ namespace MelonLibrary
             {
                 if (String.IsNullOrWhiteSpace(value))
                 {
-                    throw new ArgumentException("Description");
+                    throw new NullFieldOrPropertyException(NullFieldOrPropertyException.InvalidDescriptionName);
                 }
 
                 this.description = value;
