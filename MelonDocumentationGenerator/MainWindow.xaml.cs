@@ -261,7 +261,7 @@ namespace MelonDocumentationGenerator
 
             if (comboboxItem != null)
             {
-                MessageBox.Show("I LIED....");
+                MessageBox.Show("New style set");
             }
 
             if (comboboxItem.Content.ToString() == "Melon Pattern")

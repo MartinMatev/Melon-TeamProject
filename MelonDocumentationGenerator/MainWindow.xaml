@@ -190,8 +190,8 @@
                     </ComboBox>
                     <Button Width="80" Height="22" Margin="391,-39,-59,8" 
                             Name="buttonStylePatternChosen" Click="OnStyleButtonClick"
-                            ToolTip="I won't kidnap you, I swear..."
-                            Background="Transparent" Content="Free candy" Cursor="Hand">
+                            ToolTip="Set the preferred style"
+                            Background="Transparent" Content="Choose style" Cursor="Hand">
                         <Button.Style>
                             <Style TargetType="Button">
                                 <Setter Property="IsEnabled" Value="False" />
