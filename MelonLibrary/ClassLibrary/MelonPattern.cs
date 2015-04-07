@@ -9,7 +9,7 @@ namespace MelonLibrary
     {
         private static readonly Document PAGE_SIZE = new Document(iTextSharp.text.PageSize.A4);
         private static readonly Font FONT = new Font(BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, false), 12, Font.ITALIC);
-        private static readonly Image HEADER = Image.GetInstance(new Uri(System.IO.Path.GetFullPath("../../Images/Penguins.jpg")));
+        private static readonly Image HEADER = Image.GetInstance(new Uri(System.IO.Path.GetFullPath("../../Images/Melon_header.jpg")));
         private const bool PAGE_NUMBER = false;
 
         public MelonPattern()
