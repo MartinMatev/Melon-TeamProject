@@ -11,7 +11,7 @@ using Paragraph = MelonLibrary.Paragraph;
 
 namespace MelonDocumentationGenerator
 {
-    public class DocumentationGenerator
+    public class DocumentationGenerator : IDocumentationGenerator
     {
         private List<IHuman> teamMembers;
         private List<Screenshot> screenshots;
@@ -191,11 +191,18 @@ namespace MelonDocumentationGenerator
             this.usedResourcesByID[(int)Resource.ResourceType.ExternalResource] = true;
         }
 
-        public void Export()
+        public void Export(string savePath)
         {
+            string path;
+            string docName;
+            int indexOfFileName = savePath.LastIndexOf('\\');
+
+            path = savePath.Substring(0, indexOfFileName);
+            docName = savePath.Substring(indexOfFileName+1);
+   
             Document pdf = new Document(iTextSharp.text.PageSize.A4, 20, 20, 35, 35);
             PdfWriter writer = PdfWriter
-                .GetInstance(pdf, new FileStream(System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Test.pdf"),
+                .GetInstance(pdf, new FileStream(System.IO.Path.Combine(path, docName),
                     FileMode.Create));
 
             pdf.Open();
@@ -208,8 +215,7 @@ namespace MelonDocumentationGenerator
             pdf.Add(new iTextSharp.text.Paragraph(30, this.generalInfo.ProjectName, new Font(BaseFont.CreateFont(BaseFont.TIMES_ROMAN, BaseFont.CP1252, false), 40)));
             pdf.Add(new iTextSharp.text.Paragraph(30, "created by " + this.generalInfo.TeamName,
                 new Font(BaseFont.CreateFont(), 20)));
-            pdf.Add(new Chunk(string.Format(@"Course: {0}
-", this.generalInfo.Course)));
+            pdf.Add(new Chunk(string.Format(@"Course: {0}", this.generalInfo.Course)));
             pdf.Add(new Chunk("Project repository:"));
             pdf.Add(new Chunk(this.projectGitInfo.ToString()));
 
@@ -238,7 +244,7 @@ namespace MelonDocumentationGenerator
             {
                 var paragraph = new iTextSharp.text.Paragraph(Environment.NewLine + item.Description);
                 iTextSharp.text.Image pic = iTextSharp.text.Image.GetInstance(item.ImageFilePath);
-                //Image pic = Image.GetInstance(item.ImageFilePath);
+             
                 if (pic.Height > pic.Width)
                 {
                     float percentage = 0.0f;
@@ -259,15 +265,19 @@ namespace MelonDocumentationGenerator
                 pdf.Add(pic);
             }
 
-            //pdf.Add(imghead);
-
-            //pdf.Add(new Paragraph(1, "string"));
-
             pdf.Close();
-
-
-
             MessageBox.Show("Done!");
         }
+
+        public bool CheckAllResources()
+        {
+            foreach(bool k in usedResourcesByID)
+            {
+                if (!k)
+                    return false;
+            }
+            return true;
+        }
+
     }
 }

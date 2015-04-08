@@ -301,17 +301,24 @@ namespace MelonDocumentationGenerator
 
         public void SavePDFFile(object sender, RoutedEventArgs e)
         {
-            if(string.IsNullOrEmpty(this.savePath))
+            if (facade.CheckAllResources())
             {
-                lblErrorMessage.Content = "Please select save path!";
+                if (string.IsNullOrEmpty(this.savePath))
+                {
+                    lblErrorMessage.Content = "Please select save path!";
+                }
+                else
+                {
+                    lblErrorMessage.Content = String.Empty;
+
+                    facade.Export(this.savePath);
+
+                    // 
+                }
             }
             else
             {
-                lblErrorMessage.Content = String.Empty;
-
-                facade.Export();
-
-                // 
+                lblErrorMessage.Content = "Please fill all resources!";
             }
         }
 
