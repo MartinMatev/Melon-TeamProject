@@ -100,6 +100,8 @@
                     <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
                         <Button x:Name="btn_screenshotDialog" Width="150" Height="35" Margin="0,40,0,0" Click="Btn_screenshotDialog_OnClick">Select Image</Button>
                         <Button x:Name="btn_screenshotSubmit"  Width="150" Height="35" Margin="5" Click="Btn_screenshotSubmit_OnClick">Submit Screenshot</Button>
+                        <Label x:Name="lblErrorMsgScreen"  Width="150" Height="35" Margin="5" ></Label>
+
                     </StackPanel>
                 </StackPanel>
             </TabItem>

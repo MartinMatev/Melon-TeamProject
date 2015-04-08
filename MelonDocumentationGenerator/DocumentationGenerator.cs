@@ -11,19 +11,19 @@ using Paragraph = MelonLibrary.Paragraph;
 
 namespace MelonDocumentationGenerator
 {
-    public class DocumentationGenerator : IDocumentationGenerator
+    public class DocumentationGenerator :IDocumentationGenerator
     {
-        private List<IHuman> teamMembers;
-        private List<Screenshot> screenshots;
-        private List<IResource> resources;
-        private List<IResource> usedResources;
-        private List<ProjectParticipant> participants;
-        private StylePattern stylePattern;
+        private const string EmptyEntry = "not filled";
+        private IList<IHuman> teamMembers;
+        private IList<Screenshot> screenshots;
+        private IList<IResource> resources;
+        private IList<IResource> usedResources;
+        private IList<ProjectParticipant> participants;
+        private IStylePattern stylePattern;
         private GeneralProjetctInfo generalInfo;
         private ProjectGit projectGitInfo;
         private Paragraph mainProjectDescription;
         private bool[] usedResourcesByID;
-        private const string EmptyEntry = "not filled";
 
         public DocumentationGenerator()
         {
@@ -72,7 +72,7 @@ namespace MelonDocumentationGenerator
             }
         }
 
-        public StylePattern StylePattern
+        public IStylePattern StylePattern
         {
             get
             {

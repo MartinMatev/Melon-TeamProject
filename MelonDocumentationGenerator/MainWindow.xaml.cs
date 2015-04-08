@@ -10,6 +10,8 @@ using iTextSharp.text;
 using iTextSharp.text.pdf;
 using WPF.Themes;
 using Paragraph = MelonLibrary.Paragraph;
+using MelonLibrary.ClassLibrary.Exceptions;
+using MelonLibrary;
 
 namespace MelonDocumentationGenerator
 {
@@ -19,7 +21,7 @@ namespace MelonDocumentationGenerator
     public partial class MainWindow : Window
     {
         private RadioButton rbTypeMember;
-        private DocumentationGenerator facade;
+        private IDocumentationGenerator facade;
         private OpenFileDialog screenshotDialog = new OpenFileDialog();
         private Nullable<bool> screenshotDialogResult;
         private Nullable<bool> saveDialog;
@@ -161,21 +163,32 @@ namespace MelonDocumentationGenerator
 
         private void Btn_screenshotSubmit_OnClick(object sender, RoutedEventArgs e)
         {
-            if (this.screenshotDialogResult == true)
+            try
             {
-                this.facade.AddScreenshot(this.lastImageChosen, this.tb_screenshotDescription.Text);
+                if (this.screenshotDialogResult == true)
+                {
+                    this.facade.AddScreenshot(this.lastImageChosen, this.tb_screenshotDescription.Text);
+                }
+
+                string fileName = PathIO.GetFileName(this.lastImageChosen);
+                string imageDescription = this.tb_screenshotDescription.Text
+                    .Substring(0, Math.Min(50, this.tb_screenshotDescription.Text.Length));
+
+                this.tbl_screenshotStatus.Text += String.Format("{2}{0} - {1}", fileName,
+                    imageDescription, Environment.NewLine);
+
+                this.tb_screenshotDescription.Text = String.Empty;
+
+                MessageBox.Show("Screenshot saved!", "Screenshot saved", MessageBoxButton.OK);
             }
-
-            MessageBox.Show("Screenshot saved!", "Screenshot saved", MessageBoxButton.OK);
-
-            string fileName = PathIO.GetFileName(this.lastImageChosen);
-            string imageDescription = this.tb_screenshotDescription.Text
-                .Substring(0, Math.Min(50, this.tb_screenshotDescription.Text.Length));
-
-            this.tbl_screenshotStatus.Text += String.Format("{2}{0} - {1}", fileName,
-                imageDescription, Environment.NewLine);
-
-            this.tb_screenshotDescription.Text = String.Empty;
+            catch (NullReferenceException )
+            {
+                lblErrorMsgScreen.Content = "Please write description!";
+            }
+            catch (NullFieldOrPropertyException)
+            {
+                lblErrorMsgScreen.Content = "Please write description!";
+            }
         }
 
         private void TeamMemberSubmit_OnLostFocus(object sender, RoutedEventArgs e)

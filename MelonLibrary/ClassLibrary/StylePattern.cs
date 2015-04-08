@@ -7,12 +7,12 @@ namespace MelonLibrary
 {
     public abstract class StylePattern : ProjectEntity, IStylePattern
     {
-        protected Font font;
-        protected Document pageSize;
-        protected Image templateImage;
-        protected bool pageNumber;
+        private Font font;
+        private Document pageSize;
+        private Image templateImage;
+        private bool pageNumber;
 
-        public StylePattern(Font font, Document pageSize, Image template, bool pageNumber, PatternType patternType)
+        protected StylePattern(Font font, Document pageSize, Image template, bool pageNumber, PatternType patternType)
         {
             this.Font = font;
             this.PageSize = pageSize;
