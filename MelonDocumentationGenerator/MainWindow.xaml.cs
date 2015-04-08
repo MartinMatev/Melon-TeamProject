@@ -1,11 +1,15 @@
 ﻿using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using Microsoft.Win32;
 using  PathIO = System.IO.Path;
 using System.Windows.Media.Imaging;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using WPF.Themes;
+using Paragraph = MelonLibrary.Paragraph;
 
 namespace MelonDocumentationGenerator
 {
@@ -295,7 +299,7 @@ namespace MelonDocumentationGenerator
 
         }
 
-        private void SavePDFFile(object sender, RoutedEventArgs e)
+        public void SavePDFFile(object sender, RoutedEventArgs e)
         {
             if(string.IsNullOrEmpty(this.savePath))
             {
@@ -304,12 +308,12 @@ namespace MelonDocumentationGenerator
             else
             {
                 lblErrorMessage.Content = String.Empty;
+
+                facade.Export();
+
                 // 
             }
         }
-
-
-
 
     }
 }

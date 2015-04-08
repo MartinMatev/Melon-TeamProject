@@ -21,5 +21,13 @@
                 this.hasParticipated = value;
             }
         }
+
+        public override string ToString()
+        {
+            return string.Format(@"
+{0} {1} ({2}) - {3}participated [{4}]
+", this.FirstName, this.LastName, this.username, this.HasParticipated ? string.Empty : "NOT ",
+                this.HasParticipated ? "V" : "X");
+        }
     }
 }
